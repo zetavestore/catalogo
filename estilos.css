@@ -284,11 +284,12 @@ table.tallas th {
 
 @media (max-width: 768px) {
   main.producto-container {
+    max-width: 85%;
     flex-direction: column;
     padding: 0 10px;
     justify-content: center;
     align-items: flex-start;
-    margin: 20px;
+    margin: 10px;
   }
 
   .imagenes-producto {
