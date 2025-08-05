@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Remera Believe - Zetave</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../estilos.css" />
+</head>
+<body>
+  <nav class="navbar">
+  <div class="menu-toggle" id="menu-toggle">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  <ul class="nav-list" id="nav-list">
+    <li><a href="../index.html">Inicio</a></li>
+    <li><a href="../remeras.html">Remeras</a></li>
+    <li><a href="../chombas.html">Chombas</a></li>
+    <li><a href="../buzos.html">Buzos</a></li>
+    <li><a href="../jeans.html">Jeans</a></li>
+    <li><a href="../importadas.html">Importadas</a></li>
+    <li><a href="../pantalones.html">Pantalones</a></li>
+    <li><a href="../contacto.html">Contacto</a></li>
+  </ul>
+</nav>
+
+  <main class="producto-container">
+    <section class="imagenes-producto galeria-producto">
+  <input type="radio" name="galeria" id="img-1" checked>
+  <input type="radio" name="galeria" id="img-2">
+
+  <div class="imagen" id="slide-1">
+    <label for="img-2" class="nav nav-next">›</label>
+    <label for="img-2" class="nav nav-prev">‹</label>
+    <img src="../img/Remera Art ADELANTE.jpg" alt="Remera Art">
+</div>
+
+  <div class="imagen" id="slide-2">
+    <label for="img-1" class="nav nav-next">›</label>
+    <label for="img-1" class="nav nav-prev">‹</label>
+    <img src="../img/Remera Art ATRAS.jpg" alt="Remera Art">
+</div>
+</section>
+
+    <section class="descripcion-producto">
+      <h1>Remera Art</h1>
+      <p class="precio-producto">$15.000</p>
+      
+<p><strong>Colores disponibles: (Seleccione Uno)</strong></p>
+<div class="color-selector">
+  <button class="color-btn" data-color="beige" style="background-color: rgb(230, 211, 159); border: 1px solid #000000;"></button>
+</div>
+
+<p class="talles-visuales-titulo"><strong>Talles disponibles:</strong></p>
+<div class="talle-selector">
+  <span class="talle" data-talle="S">S</span>
+  <span class="talle" data-talle="M">M</span>
+  <span class="talle" data-talle="L">L</span>
+</div>
+
+
+
+      <table class="tallas" aria-label="Tabla de medidas">
+        <thead>
+          <tr>
+            <th>Talle</th>
+            <th>Largo (cm)</th>
+            <th>Ancho (cm)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>S</td><td>80</td><td>56</td></tr>
+          <tr><td>M</td><td>81</td><td>59</td></tr>
+          <tr><td>L</td><td>83</td><td>63</td></tr>
+        </tbody>
+      </table>
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Zetave Store.</p>
+    <p>Instagram: @zetave.store | WhatsApp: 2804304421</p>
+  </footer>
+
+  <div class="lightbox" id="lightbox">
+  <span class="close-lightbox" id="close-lightbox">&times;</span>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="Imagen ampliada">
+  <div class="lightbox-nav">
+    <span class="lightbox-prev" id="lightbox-prev">&#10094;</span>
+    <span class="lightbox-next" id="lightbox-next">&#10095;</span>
+  </div>
+</div>
+<script>
+  // Menú hamburguesa
+const menuToggle = document.getElementById('menu-toggle');
+const navList = document.getElementById('nav-list');
+menuToggle.addEventListener('click', () => {
+  navList.classList.toggle('show');
+});
+
+// CAMBIAR STOCK DISPONIBLE
+const tallesPorColor = {
+  beige: ['M'],
+};
+
+document.querySelectorAll('.color-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.color-btn').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+
+    const colorSeleccionado = btn.dataset.color;
+    const disponibles = tallesPorColor[colorSeleccionado];
+
+    document.querySelectorAll('.talle').forEach(talle => {
+      const valor = talle.dataset.talle;
+      if (disponibles.includes(valor)) {
+        talle.classList.remove('unavailable');
+      } else {
+        talle.classList.add('unavailable');
+      }
+    });
+  });
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  document.querySelector('.imagen[data-color="slide-1"]').click();
+});
+
+// Lightbox
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const closeBtn = document.getElementById('close-lightbox');
+const nextBtn = document.getElementById('lightbox-next');
+const prevBtn = document.getElementById('lightbox-prev');
+
+const images = [
+  "../img/Remera Art ADELANTE.jpg",
+  "../img/Remera Art ATRAS.jpg",
+];
+
+let currentImageIndex = 0;
+
+document.querySelectorAll('.galeria-producto .imagen img').forEach((img, index) => {
+  img.addEventListener('click', () => {
+    currentImageIndex = index;
+    lightboxImg.src = images[currentImageIndex];
+    lightbox.style.display = 'flex';
+  });
+});
+
+closeBtn.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
+
+nextBtn.addEventListener('click', () => {
+  currentImageIndex = (currentImageIndex + 1) % images.length;
+  lightboxImg.src = images[currentImageIndex];
+});
+
+prevBtn.addEventListener('click', () => {
+  currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+  lightboxImg.src = images[currentImageIndex];
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === "Escape") {
+    lightbox.style.display = 'none';
+  }
+});
+
+// Seleccionar color cambia imagen principal
+const colorButtons = document.querySelectorAll('.color-btn');
+const colorToImageId = {
+  beige: 'img-1',
+};
+
+colorButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const color = button.dataset.color;
+    const imageId = colorToImageId[color];
+    const radio = document.getElementById(imageId);
+    if (radio) radio.checked = true;
+  });
+});
+</script>
+</body>
+</html>
+</body>
+</html>

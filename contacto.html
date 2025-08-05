@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto - Zetave</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <nav class="navbar">
+  <div class="menu-toggle" id="menu-toggle">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  <ul class="nav-list" id="nav-list">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="remeras.html">Remeras</a></li>
+    <li><a href="chombas.html">Chombas</a></li>
+    <li><a href="buzos.html">Buzos</a></li>
+    <li><a href="jeans.html">Jeans</a></li>
+    <li><a href="pantalones.html">Pantalones</a></li>
+    <li><a href="importadas.html">Importadas</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+</nav>
+
+  <header class="header">
+    <h1>CONTACTO</h1>
+    <p>Escribinos por cualquiera de nuestras redes para realizar tu compra!</p>
+  </header>
+
+  <main class="contacto-cards">
+    <div class="card-contacto">
+      <img class="icono-contacto" src="img/instagram.png" alt="Instagram">
+      <h2>Instagram</h2>
+      <p>Seguinos y escribinos por DM</p>
+      <a class="boton-contacto" href="https://instagram.com/zetave.store" target="_blank">Ir a Instagram</a>
+    </div>
+
+    <div class="card-contacto">
+      <img class="icono-contacto" src="img/whatsapp.png" alt="WhatsApp">
+      <h2>WhatsApp</h2>
+      <p>Si te queda mas comodo podes por WhatsApp</p>
+      <a class="boton-contacto" href="https://wa.me/2804304421" target="_blank">Abrir WhatsApp</a>
+    </div>
+
+    <div class="card-contacto">
+      <img class="icono-contacto" src="img/facebook.png" alt="Facebook">
+      <h2>Facebook</h2>
+      <p>También podés visitar la pagina de FB</p>
+      <a class="boton-contacto" href="https://www.facebook.com/people/Zetave-Store/61575958594732" target="_blank">Ir a Facebook</a>
+    </div>
+  </main>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navList = document.getElementById('nav-list');
+    menuToggle.addEventListener('click', () => {
+      navList.classList.toggle('show');
+    });
+  </script>
+
+  <footer class="footer">
+    <p>&copy; 2025 Zetave Store.</p>
+    <p>Instagram: @zetave.store | WhatsApp: 2804304421</p>
+  </footer>
+</body>
+</html>

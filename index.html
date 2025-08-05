@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo Zetave</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <nav class="navbar">
+  <div class="menu-toggle" id="menu-toggle">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  <ul class="nav-list" id="nav-list">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="remeras.html">Remeras</a></li>
+    <li><a href="chombas.html">Chombas</a></li>
+    <li><a href="buzos.html">Buzos</a></li>
+    <li><a href="jeans.html">Jeans</a></li>
+    <li><a href="pantalones.html">Pantalones</a></li>
+    <li><a href="importadas.html">Importadas</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+</nav>
+
+  <header class="header">
+    <img src="img/logo.png" alt="Logo Zetave" class="logo">
+    <h1>ZETAVE</h1>
+    <p>Catálogo</p>
+  </header>
+
+  <main class="grid-container">
+    <a href="remeras.html" class="categoria">
+      <img src="img/remeras.jpg" alt="Remeras">
+      <h2>Remeras</h2>
+    </a>
+    <a href="buzos.html" class="categoria">
+      <img src="img/buzos.jpg" alt="Buzos">
+      <h2>Buzos</h2>
+    </a>
+    <a href="jeans.html" class="categoria">
+      <img src="img/jeans.jpg" alt="Jeans">
+      <h2>Jeans</h2>
+    </a>
+    <a href="pantalones.html" class="categoria">
+      <img src="img/pantalones.jpg" alt="Pantalones">
+      <h2>Pantalones</h2>
+    </a>
+    <a href="chombas.html" class="categoria">
+      <img src="img/Chomba Washington Chocolate 2.jpg" alt="Chombas">
+      <h2>Chombas</h2>
+    </a>
+    <a href="importadas.html" class="categoria">
+      <img src="img/importadas.jpg" alt="Importadas">
+      <h2>Importadas</h2>
+    </a>
+  </main>
+  <script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navList = document.getElementById('nav-list');
+
+  menuToggle.addEventListener('click', () => {
+    navList.classList.toggle('show');
+  });
+</script>
+
+</body>
+<footer class="footer">
+  <p>&copy; 2025 Zetave Store.</p>
+  <p>Instagram: @zetave.store | WhatsApp: 2804304421</p>
+</footer>
+</html>

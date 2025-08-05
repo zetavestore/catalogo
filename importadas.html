@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Importadas - Zetave</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <nav class="navbar">
+  <div class="menu-toggle" id="menu-toggle">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  <ul class="nav-list" id="nav-list">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="remeras.html">Remeras</a></li>
+    <li><a href="chombas.html">Chombas</a></li>
+    <li><a href="buzos.html">Buzos</a></li>
+    <li><a href="jeans.html">Jeans</a></li>
+    <li><a href="pantalones.html">Pantalones</a></li>
+    <li><a href="importadas.html">Importadas</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+</nav>
+
+  <header class="header">
+    <h1>IMPORTADAS</h1>
+  </header>
+
+  <main class="grid-container">
+    <a href="importadas/camisetalosangeles.html" class="categoria doble-img">
+      <div class="imagen-contenedor">
+        <img src="img/Camiseta Los Angeles.jpg" class="img-frente" alt="Camiseta Los Angeles">
+        <img src="img/Camiseta Los Angeles.jpg" class="img-atras" alt="Camiseta Los Angeles">
+      </div>
+      <h2>Camiseta Los Angeles</h2>
+      <p class="precio">$50.000</p>
+    </a>
+
+    <a href="importadas/chombalabellevie.html" class="categoria doble-img">
+      <div class="imagen-contenedor">
+        <img src="img/Chomba La Belle Vie.jpg" class="img-frente" alt="Chomba La Belle Vie">
+        <img src="img/Chomba La Belle Vie.jpg" class="img-atras" alt="Chomba La Belle Vie">
+      </div>
+      <h2>La Belle Vie</h2>
+      <p class="precio">$55.000</p>
+    </a>
+
+    <a href="importadas/remerachicago.html" class="categoria doble-img">
+      <div class="imagen-contenedor">
+        <img src="img/Remera Chicago.jpg" class="img-frente" alt="Remera Chicago">
+        <img src="img/Remera Chicago.jpg" class="img-atras" alt="Remera Chicago">
+      </div>
+      <h2>Remera Chicago</h2>
+      <p class="precio">$40.000</p>
+    </a>
+
+    <a href="importadas/camisetaking.html" class="categoria doble-img">
+      <div class="imagen-contenedor">
+        <img src="img/Camiseta King.jpg" class="img-frente" alt="Camiseta King">
+        <img src="img/Camiseta King.jpg" class="img-atras" alt="Camiseta King">
+      </div>
+      <h2>Camiseta King</h2>
+      <p class="precio">$45.000</p>
+    </a>
+
+    <a href="importadas/camisetaracing.html" class="categoria doble-img">
+      <div class="imagen-contenedor">
+        <img src="img/Camiseta Racing.jpg" class="img-frente" alt="Camiseta Racing">
+        <img src="img/Camiseta Racing.jpg" class="img-atras" alt="Camiseta Racing">
+      </div>
+      <h2>Camiseta Racing</h2>
+      <p class="precio">$40.000</p>
+    </a>
+  </main>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navList = document.getElementById('nav-list');
+    menuToggle.addEventListener('click', () => {
+      navList.classList.toggle('show');
+    });
+  </script>
+<footer class="footer">
+  <p>&copy; 2025 Zetave Store.</p>
+  <p>Instagram: @zetave.store | WhatsApp: 2804304421</p>
+</footer>
+</body>
+</html>

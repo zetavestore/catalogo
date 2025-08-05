@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jean Tacoma - Zetave</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../estilos.css" />
+</head>
+<body>
+  <nav class="navbar">
+  <div class="menu-toggle" id="menu-toggle">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  <ul class="nav-list" id="nav-list">
+    <li><a href="../index.html">Inicio</a></li>
+    <li><a href="../remeras.html">Remeras</a></li>
+    <li><a href="../chombas.html">Chombas</a></li>
+    <li><a href="../buzos.html">Buzos</a></li>
+    <li><a href="../jeans.html">Jeans</a></li>
+    <li><a href="../importadas.html">Importadas</a></li>
+    <li><a href="../pantalones.html">Pantalones</a></li>
+    <li><a href="../contacto.html">Contacto</a></li>
+  </ul>
+</nav>
+
+  <main class="producto-container">
+    <section class="imagenes-producto galeria-producto">
+      <input type="radio" name="galeria" id="img-1" checked>
+      <input type="radio" name="galeria" id="img-2">
+
+      <div class="imagen" id="slide-1">
+        <label for="img-2" class="nav nav-next">›</label>
+        <label for="img-2" class="nav nav-prev">‹</label>
+        <img src="../img/Jean Tacoma ADELANTE.jpg" alt="Jean Tacoma ADELANTE">
+      </div>
+
+      <div class="imagen" id="slide-2">
+        <label for="img-1" class="nav nav-next">›</label>
+        <label for="img-1" class="nav nav-prev">‹</label>
+        <img src="../img/Jean Tacoma ATRAS.jpg" alt="Jean Tacoma ATRAS">
+      </div>
+    </section>
+
+    <section class="descripcion-producto">
+      <h1>Jean Tacoma</h1>
+      <p class="precio-producto">$35.000</p>
+
+<!--CAMBIAR STOCK (PONER talle unavailable)-->
+      <p class="talles-visuales-titulo"><strong>Talles disponibles:</strong></p>
+      <div class="talle-selector">
+        <span class="talle" data-talle="38">38</span>
+        <span class="talle" data-talle="40">40</span>
+        <span class="talle" data-talle="42">42</span>
+        <span class="talle unavailable" data-talle="44">44</span>
+        <span class="talle" data-talle="46">46</span>
+        <span class="talle" data-talle="48">48</span>
+      </div>
+
+      <table class="tallas" aria-label="Tabla de medidas">
+        <thead>
+          <tr>
+            <th>Talle</th>
+            <th>Largo (cm)</th>
+            <th>Cintura (cm)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>38</td><td>101</td><td>39</td></tr>
+          <tr><td>40</td><td>102</td><td>41</td></tr>
+          <tr><td>42</td><td>102</td><td>43</td></tr>
+          <tr><td>44</td><td>103</td><td>45</td></tr>
+          <tr><td>46</td><td>104</td><td>46</td></tr>
+          <tr><td>48</td><td>105</td><td>48</td></tr>
+        </tbody>
+      </table>
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Zetave Store.</p>
+    <p>Instagram: @zetave.store | WhatsApp: 2804304421</p>
+  </footer>
+
+  <div class="lightbox" id="lightbox">
+    <span class="close-lightbox" id="close-lightbox">&times;</span>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="Imagen ampliada">
+    <div class="lightbox-nav">
+      <span class="lightbox-prev" id="lightbox-prev">&#10094;</span>
+      <span class="lightbox-next" id="lightbox-next">&#10095;</span>
+    </div>
+  </div>
+
+  <script>
+  // Menú hamburguesa
+  const menuToggle = document.getElementById('menu-toggle');
+  const navList = document.getElementById('nav-list');
+  menuToggle.addEventListener('click', () => {
+    navList.classList.toggle('show');
+  });
+
+  // Lightbox
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.getElementById('close-lightbox');
+  const nextBtn = document.getElementById('lightbox-next');
+  const prevBtn = document.getElementById('lightbox-prev');
+
+  const images = [
+    "../img/Jean Tacoma ADELANTE.jpg",
+    "../img/Jean Tacoma ATRAS.jpg"
+  ];
+
+  let currentImageIndex = 0;
+
+  document.querySelectorAll('.galeria-producto .imagen img').forEach((img, index) => {
+    img.addEventListener('click', () => {
+      currentImageIndex = index;
+      lightboxImg.src = images[currentImageIndex];
+      lightbox.style.display = 'flex';
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  nextBtn.addEventListener('click', () => {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    lightboxImg.src = images[currentImageIndex];
+  });
+
+  prevBtn.addEventListener('click', () => {
+    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+    lightboxImg.src = images[currentImageIndex];
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === "Escape") {
+      lightbox.style.display = 'none';
+    }
+  });
+  </script>
+</body>
+</html>

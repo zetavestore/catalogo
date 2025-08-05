@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pantalones - Zetave</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <nav class="navbar">
+  <div class="menu-toggle" id="menu-toggle">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  <ul class="nav-list" id="nav-list">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="remeras.html">Remeras</a></li>
+    <li><a href="chombas.html">Chombas</a></li>
+    <li><a href="buzos.html">Buzos</a></li>
+    <li><a href="jeans.html">Jeans</a></li>
+    <li><a href="pantalones.html">Pantalones</a></li>
+    <li><a href="importadas.html">Importadas</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+</nav>
+
+  <header class="header">
+    <h1>PANTALONES</h1>
+  </header>
+
+  <main class="grid-container">
+    <a href="pantalones/joggingbaggy.html" class="categoria doble-img">
+      <div class="imagen-contenedor">
+        <img src="img/Jogging Baggy Negro.jpg" class="img-frente" alt="Jogging Baggy">
+        <img src="img/Jogging Baggy Marron.jpg" class="img-atras" alt="Jogging Baggy">
+      </div>
+      <h2>Jogging Baggy</h2>
+      <p class="precio">$30.000</p>
+    </a>
+
+    <a href="pantalones/joggingbaggyline.html" class="categoria doble-img">
+      <div class="imagen-contenedor">
+        <img src="img/Jogging Baggy Line Marron ATRAS.jpg" class="img-frente" alt="Jogging Baggy Line">
+        <img src="img/Jogging Baggy Line Marron ADELANTE.jpg" class="img-atras" alt="Jogging Baggy Line">
+      </div>
+      <h2>Jogging Baggy Line</h2>
+      <p class="precio">$32.000</p>
+    </a>
+
+    <a href="pantalones/pantaloncharged.html" class="categoria doble-img">
+      <div class="imagen-contenedor">
+        <img src="img/Pantalon Cargo Charged Negro.jpg" class="img-frente" alt="Pantalon Cargo Charged">
+        <img src="img/Pantalon Cargo Charged Verde.jpg" class="img-atras" alt="Pantalon Cargo Charged">
+      </div>
+      <h2>Pantalon Cargo Charged</h2>
+      <p class="precio">$35.000</p>
+    </a>
+
+    <a href="pantalones/pantalondsr.html" class="categoria doble-img">
+      <div class="imagen-contenedor">
+        <img src="img/Pantalon Cargo DSR Crema.jpg" class="img-frente" alt="Pantalon Cargo DSR">
+        <img src="img/Pantalon Cargo DSR Crema.jpg" class="img-atras" alt="Pantalon Cargo DSR">
+      </div>
+      <h2>Pantalon Cargo DSR</h2>
+      <p class="precio">$35.000</p>
+    </a>
+
+    <a href="pantalones/pantalonpekin.html" class="categoria doble-img">
+      <div class="imagen-contenedor">
+        <img src="img/Pantalon Cargo Pekin Caqui.jpg" class="img-frente" alt="Pantalon Cargo Pekin">
+        <img src="img/Pantalon Cargo Pekin Caqui.jpg" class="img-atras" alt="Pantalon Cargo Pekin">
+      </div>
+      <h2>Pantalon Cargo Pekin</h2>
+      <p class="precio">$35.000</p>
+    </a>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Zetave Store.</p>
+    <p>Instagram: @zetave.store | WhatsApp: 2804304421</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navList = document.getElementById('nav-list');
+    menuToggle.addEventListener('click', () => {
+      navList.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
