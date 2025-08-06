@@ -167,13 +167,6 @@ main {
     }
 }
 
-@media (max-width: 768px) {
-  .doble-img:hover .img-frente,
-  .doble-img:hover .img-atras {
-    opacity: 1;
-  }
-}
-
 .imagen-contenedor {
     position: relative;
     width: 100%;
@@ -194,12 +187,14 @@ main {
     opacity: 0;
 }
 
-.doble-img:hover .img-frente {
-    opacity: 0;
-}
+@media (min-width: 768px) {
+  .doble-img:hover .img-frente {
+      opacity: 0;
+  }
 
-.doble-img:hover .img-atras {
-    opacity: 1;
+  .doble-img:hover .img-atras {
+      opacity: 1;
+  }
 }
 
 .precio {
