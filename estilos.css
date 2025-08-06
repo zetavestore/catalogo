@@ -103,6 +103,16 @@ main {
     font-weight: 500;
 }
 
+.logo {
+  max-width: 300px;
+}
+
+@media (max-width: 768px) {
+  .logo {
+  max-width: 220px;
+}
+}
+
 /* FOOTER */
 .footer {
     background-color: #f1f1f1;
@@ -187,9 +197,22 @@ main {
 
 .precio {
     text-align: center;
-    color: #888;
-    font-size: 0.9rem;
-    margin-bottom: 15px;
+    color: #797979;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+} 
+
+.precio-grid-original {
+  text-decoration: line-through;
+  text-decoration-color: #a1100d;
+  margin-right: 10px;
+}
+
+.precio-grid-descuento {
+  color: #008607;
+  font-weight: bold;
+  margin-left: 10px;
 }
 
 .precio-producto {
@@ -198,6 +221,21 @@ main {
   margin-bottom: 20px;
   font-weight: 700;
   text-align: left;
+}
+
+.precio-original {
+  text-decoration: line-through;
+  text-decoration-color: #a1100d;
+  color: #999;
+  margin-right: 10px;
+  font-weight: 500;
+}
+
+.precio-descuento {
+  font-size: 1.8rem;
+  color: #008607;
+  margin-bottom: 20px;
+  font-weight: 900;
 }
 
 /* Página individual de producto */
