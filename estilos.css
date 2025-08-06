@@ -195,6 +195,12 @@ main {
     opacity: 1;
 }
 
+@media (max-width: 768px) {
+  .img-atras {
+    display: none;
+  }
+}
+
 .precio {
     text-align: center;
     color: #797979;
