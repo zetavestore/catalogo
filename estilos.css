@@ -167,6 +167,13 @@ main {
     }
 }
 
+@media (max-width: 768px) {
+  .doble-img:hover .img-frente,
+  .doble-img:hover .img-atras {
+    opacity: 1;
+  }
+}
+
 .imagen-contenedor {
     position: relative;
     width: 100%;
@@ -193,12 +200,6 @@ main {
 
 .doble-img:hover .img-atras {
     opacity: 1;
-}
-
-@media (max-width: 768px) {
-  .img-atras {
-    display: none;
-  }
 }
 
 .precio {
