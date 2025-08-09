@@ -11,6 +11,10 @@ main {
     flex: 1;
 }
 
+p {
+    font-size: 1.1rem;
+}
+
 /* HEADER Y NAVBAR */
 .navbar {
     position: sticky;
@@ -320,6 +324,23 @@ main.producto-container {
   justify-content: flex-start;
 }
 
+@media (max-width: 768px) {
+  .color-selector {
+    order: -1;
+    margin-bottom: 40px !important;
+  }
+
+  .texto-colores-disponibles {
+    order: -1;
+    font-size: 1.1rem;
+    margin-top: 0px !important;
+  }
+}
+
+.talles-visuales-titulo{
+  margin-top: 50px;
+}
+
 .descripcion-producto h1 {
   font-size: 2.8rem;
   font-weight: 700;
@@ -613,7 +634,7 @@ body {
 .color-selector {
   display: flex;
   gap: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 
 .color-btn:focus {
@@ -623,12 +644,6 @@ body {
 .tallas td.unavailable {
   text-decoration: line-through;
   color: #999;
-}
-
-.color-selector {
-  display: flex;
-  gap: 10px;
-  margin: 10px 0;
 }
 
 .color-btn {
