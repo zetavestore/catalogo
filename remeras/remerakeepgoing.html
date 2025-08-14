@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Remera Art - Zetave</title>
+  <title>Remera Keep Going - Zetave</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../estilos.css" />
 </head>
@@ -30,27 +30,42 @@
     <section class="imagenes-producto galeria-producto">
   <input type="radio" name="galeria" id="img-1" checked>
   <input type="radio" name="galeria" id="img-2">
+  <input type="radio" name="galeria" id="img-3">
+  <input type="radio" name="galeria" id="img-4">
 
   <div class="imagen" id="slide-1">
     <label for="img-2" class="nav nav-next">›</label>
-    <label for="img-2" class="nav nav-prev">‹</label>
-    <img src="../img/Remera Art ADELANTE.jpg" alt="Remera Art">
+    <label for="img-4" class="nav nav-prev">‹</label>
+    <img src="../img/Remera Keep Going Blanco ADELANTE.jpg" alt="Remera Keep Going">
 </div>
 
   <div class="imagen" id="slide-2">
-    <label for="img-1" class="nav nav-next">›</label>
+    <label for="img-3" class="nav nav-next">›</label>
     <label for="img-1" class="nav nav-prev">‹</label>
-    <img src="../img/Remera Art ATRAS.jpg" alt="Remera Art">
+    <img src="../img/Remera Keep Going Blanco ATRAS.jpg" alt="Remera Keep Going">
+</div>
+
+  <div class="imagen" id="slide-3">
+  <label for="img-4" class="nav nav-next">›</label>
+  <label for="img-2" class="nav nav-prev">‹</label>
+  <img src="../img/Remera Keep Going Gris ADELANTE.jpg" alt="Remera Keep Going">
+</div>
+
+<div class="imagen" id="slide-4">
+  <label for="img-1" class="nav nav-next">›</label>
+  <label for="img-3" class="nav nav-prev">‹</label>
+  <img src="../img/Remera Keep Going Gris ATRAS.jpg" alt="Remera Keep Going">
 </div>
 </section>
 
     <section class="descripcion-producto">
-      <h1>Remera Art</h1>
+      <h1>Remera Keep Going</h1>
       <p class="precio-producto">$15.000</p>
       
 <p class="texto-colores-disponibles"><strong>Seleccione un color:</strong></p>
 <div class="color-selector">
-  <button class="color-btn" data-color="beige" style="background-color: rgb(230, 211, 159); border: 1px solid #000000;"></button>
+  <button class="color-btn" data-color="blanco" style="background-color: rgb(255, 255, 255); border: 1px solid #000000;"></button>
+  <button class="color-btn" data-color="gris" style="background-color: rgb(145, 145, 145); border: 1px solid #000000;"></button>
 </div>
 
 <p class="talles-visuales-titulo"><strong>Talles disponibles:</strong></p>
@@ -103,7 +118,8 @@ menuToggle.addEventListener('click', () => {
 
 // CAMBIAR STOCK DISPONIBLE
 const tallesPorColor = {
-  beige: ['M'],
+  blanco: ['S','L'],
+  gris: ['S'],
 };
 
 document.querySelectorAll('.color-btn').forEach(btn => {
@@ -137,8 +153,10 @@ const nextBtn = document.getElementById('lightbox-next');
 const prevBtn = document.getElementById('lightbox-prev');
 
 const images = [
-  "../img/Remera Art ADELANTE.jpg",
-  "../img/Remera Art ATRAS.jpg",
+  "../img/Remera Keep Going Blanco ADELANTE.jpg",
+  "../img/Remera Keep Going Blanco ATRAS.jpg",
+  "../img/Remera Keep Going Gris ADELANTE.jpg",
+  "../img/Remera Keep Going Gris ATRAS.jpg",
 ];
 
 let currentImageIndex = 0;
@@ -174,7 +192,8 @@ document.addEventListener('keydown', (e) => {
 // Seleccionar color cambia imagen principal
 const colorButtons = document.querySelectorAll('.color-btn');
 const colorToImageId = {
-  beige: 'img-1',
+  blanco: 'img-1',
+  gris: 'img-3',
 };
 
 colorButtons.forEach(button => {

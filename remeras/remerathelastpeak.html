@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Remera Art - Zetave</title>
+  <title>Remera The Last Peak - Zetave</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../estilos.css" />
 </head>
@@ -34,18 +34,18 @@
   <div class="imagen" id="slide-1">
     <label for="img-2" class="nav nav-next">›</label>
     <label for="img-2" class="nav nav-prev">‹</label>
-    <img src="../img/Remera Art ADELANTE.jpg" alt="Remera Art">
+    <img src="../img/Remera The Last Peak Beige ADELANTE.jpg" alt="Remera The Last Peak">
 </div>
 
   <div class="imagen" id="slide-2">
     <label for="img-1" class="nav nav-next">›</label>
     <label for="img-1" class="nav nav-prev">‹</label>
-    <img src="../img/Remera Art ATRAS.jpg" alt="Remera Art">
+    <img src="../img/Remera The Last Peak Beige ATRAS.jpg" alt="Remera The Last Peak">
 </div>
 </section>
 
     <section class="descripcion-producto">
-      <h1>Remera Art</h1>
+      <h1>Remera The Last Peak</h1>
       <p class="precio-producto">$15.000</p>
       
 <p class="texto-colores-disponibles"><strong>Seleccione un color:</strong></p>
@@ -58,6 +58,7 @@
   <span class="talle" data-talle="S">S</span>
   <span class="talle" data-talle="M">M</span>
   <span class="talle" data-talle="L">L</span>
+  <span class="talle" data-talle="XL">XL</span>
 </div>
 
 
@@ -71,9 +72,10 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td>S</td><td>80</td><td>56</td></tr>
-          <tr><td>M</td><td>81</td><td>59</td></tr>
-          <tr><td>L</td><td>83</td><td>63</td></tr>
+          <tr><td>S</td><td>71</td><td>53</td></tr>
+          <tr><td>M</td><td>73</td><td>56</td></tr>
+          <tr><td>L</td><td>75</td><td>57</td></tr>
+          <tr><td>XL</td><td>78</td><td>61</td></tr>
         </tbody>
       </table>
 
@@ -103,7 +105,7 @@ menuToggle.addEventListener('click', () => {
 
 // CAMBIAR STOCK DISPONIBLE
 const tallesPorColor = {
-  beige: ['M'],
+  beige: ['L'],
 };
 
 document.querySelectorAll('.color-btn').forEach(btn => {
@@ -137,8 +139,8 @@ const nextBtn = document.getElementById('lightbox-next');
 const prevBtn = document.getElementById('lightbox-prev');
 
 const images = [
-  "../img/Remera Art ADELANTE.jpg",
-  "../img/Remera Art ATRAS.jpg",
+  "../img/Remera The Last Peak Beige ADELANTE.jpg",
+  "../img/Remera The Last Peak Beige ATRAS.jpg",
 ];
 
 let currentImageIndex = 0;
