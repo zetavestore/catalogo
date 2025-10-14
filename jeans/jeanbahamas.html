@@ -94,12 +94,16 @@
   </div>
 
   <script>
-  // Menú hamburguesa
-  const menuToggle = document.getElementById('menu-toggle');
-  const navList = document.getElementById('nav-list');
-  menuToggle.addEventListener('click', () => {
-    navList.classList.toggle('show');
-  });
+// Menú hamburguesa
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById("menu-toggle");
+  const navList = document.getElementById("nav-list");
+  if (menuToggle && navList) {
+    menuToggle.addEventListener("click", () => {
+      navList.classList.toggle("show");
+    });
+  }
+});
 
   // Lightbox
   const lightbox = document.getElementById('lightbox');
