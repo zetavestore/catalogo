@@ -3,28 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Buzo Sport - Zetave</title>
+  <title>Buzo Moscow - Zetave</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../estilos.css" />
 </head>
 <body>
+  
+  
   <nav class="navbar">
-  <div class="menu-toggle" id="menu-toggle">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-  </div>
-  <ul class="nav-list" id="nav-list">
-    <li><a href="../index.html">Inicio</a></li>
-    <li><a href="../remeras.html">Remeras</a></li>
-    <li><a href="../chombas.html">Chombas</a></li>
-    <li><a href="../buzos.html">Buzos</a></li>
-    <li><a href="../jeans.html">Jeans</a></li>
-    <li><a href="../importadas.html">Importadas</a></li>
-    <li><a href="../pantalones.html">Pantalones</a></li>
-    <li><a href="../contacto.html">Contacto</a></li>
-  </ul>
-</nav>
+    <div id="menu-container"></div>
+    <script>
+      fetch("/menu.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("menu-container").innerHTML = data;
+        });
+    </script>
+  </nav>
+
+
 
   <main class="producto-container">
     <section class="imagenes-producto galeria-producto">
@@ -34,18 +31,19 @@
   <div class="imagen" id="slide-1">
     <label for="img-2" class="nav nav-next">›</label>
     <label for="img-2" class="nav nav-prev">‹</label>
-    <img src="../img/Buzo Sport Negro ADELANTE.jpg" alt="Buzo Sport Negro">
+    <img src="../img/Buzo Moscow Negro ADELANTE.jpg" alt="Buzo Moscow Negro">
 </div>
 
   <div class="imagen" id="slide-2">
     <label for="img-1" class="nav nav-next">›</label>
     <label for="img-1" class="nav nav-prev">‹</label>
-    <img src="../img/Buzo Sport Negro ATRAS.jpg" alt="Buzo Sport Negro">
+    <img src="../img/Buzo Moscow Negro ATRAS.jpg" alt="Buzo Moscow Negro">
+</div>
 </div>
 </section>
 
     <section class="descripcion-producto">
-      <h1>Buzo Sport</h1>
+      <h1>Buzo Moscow</h1>
       <p class="precio-producto">$40.000</p>
       
 <p class="texto-colores-disponibles"><strong>Seleccione un color:</strong></p>
@@ -72,10 +70,10 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td>S</td><td>72</td><td>62</td></tr>
-          <tr><td>M</td><td>75</td><td>65</td></tr>
-          <tr><td>L</td><td>78</td><td>68</td></tr>
-          <tr><td>XL</td><td>81</td><td>71</td></tr>
+          <tr><td>S</td><td>63</td><td>58</td></tr>
+          <tr><td>M</td><td>64</td><td>60</td></tr>
+          <tr><td>L</td><td>68</td><td>62</td></tr>
+          <tr><td>XL</td><td>70</td><td>64</td></tr>
         </tbody>
       </table>
 
@@ -139,8 +137,8 @@ const nextBtn = document.getElementById('lightbox-next');
 const prevBtn = document.getElementById('lightbox-prev');
 
 const images = [
-  "../img/Buzo Sport Negro ADELANTE.jpg",
-  "../img/Buzo Sport Negro ATRAS.jpg"
+  "../img/Buzo Moscow Negro ADELANTE.jpg",
+  "../img/Buzo Moscow Negro ATRAS.jpg"
 ];
 
 let currentImageIndex = 0;

@@ -8,23 +8,20 @@
   <link rel="stylesheet" href="../estilos.css" />
 </head>
 <body>
+  
+  
   <nav class="navbar">
-  <div class="menu-toggle" id="menu-toggle">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-  </div>
-  <ul class="nav-list" id="nav-list">
-    <li><a href="../index.html">Inicio</a></li>
-    <li><a href="../remeras.html">Remeras</a></li>
-    <li><a href="../chombas.html">Chombas</a></li>
-    <li><a href="../buzos.html">Buzos</a></li>
-    <li><a href="../jeans.html">Jeans</a></li>
-    <li><a href="../importadas.html">Importadas</a></li>
-    <li><a href="../pantalones.html">Pantalones</a></li>
-    <li><a href="../contacto.html">Contacto</a></li>
-  </ul>
-</nav>
+    <div id="menu-container"></div>
+    <script>
+      fetch("/menu.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("menu-container").innerHTML = data;
+        });
+    </script>
+  </nav>
+
+
 
   <main class="producto-container">
     <section class="imagenes-producto galeria-producto">
@@ -47,7 +44,10 @@
 
     <section class="descripcion-producto">
       <h1>Buzo Place</h1>
-      <p class="precio-producto">$40.000</p>
+      <p class="precio-producto">
+        <span class="precio-original">$40.000</span>
+        <span class="precio-descuento">$30.000</span>
+      </p>
       
 <p class="texto-colores-disponibles"><strong>Seleccione un color:</strong></p>
 <div class="color-selector">

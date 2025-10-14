@@ -8,23 +8,20 @@
   <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+  
+  
   <nav class="navbar">
-  <div class="menu-toggle" id="menu-toggle">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-  </div>
-  <ul class="nav-list" id="nav-list">
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="remeras.html">Remeras</a></li>
-    <li><a href="chombas.html">Chombas</a></li>
-    <li><a href="buzos.html">Buzos</a></li>
-    <li><a href="jeans.html">Jeans</a></li>
-    <li><a href="pantalones.html">Pantalones</a></li>
-    <li><a href="importadas.html">Importadas</a></li>
-    <li><a href="contacto.html">Contacto</a></li>
-  </ul>
-</nav>
+    <div id="menu-container"></div>
+    <script>
+      fetch("/menu.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("menu-container").innerHTML = data;
+        });
+    </script>
+  </nav>
+
+
 
   <header class="header">
     <h1>CHOMBAS</h1>
@@ -73,20 +70,8 @@
       </div>
       <h2>Chomba Washington</h2>
       <div class="centrar-colores">
+      <p class="etiqueta-descuento">10% OFF</p>
       <button class="color-btn" data-color="chocolate" style="background-color: rgb(158, 72, 38); border: 1px solid #000000;"></button>
-      </div>
-    </a>
-
-    <a href="chombas/chombafeel.html" class="categoria doble-img">
-      <div class="imagen-contenedor">
-        <img src="img/Chomba Feel Blanco ADELANTE.jpg" class="img-frente" alt="Chomba Feel">
-        <img src="img/Chomba Feel Blanco ATRAS.jpg" class="img-atras" alt="Chomba Feel">
-      </div>
-      <h2>Chomba Feel</h2>
-      <div class="centrar-colores">
-      <button class="color-btn" data-color="negro" style="background-color: rgb(0, 0, 0);" aria-label="Negro"></button>
-      <button class="color-btn" data-color="blanco" style="background-color: rgb(255, 255, 255); border: 1px solid #000000;"></button>
-      <button class="color-btn" data-color="natural" style="background-color: rgb(255, 254, 222); border: 1px solid #000000;"></button>
       </div>
     </a>
 
@@ -96,6 +81,20 @@
         <img src="img/Chomba Hide Negro ATRAS.jpg" class="img-atras" alt="Chomba Hide">
       </div>
       <h2>Chomba Hide</h2>
+      <div class="centrar-colores">
+      <p class="etiqueta-descuento">10% OFF</p>
+      <button class="color-btn" data-color="negro" style="background-color: rgb(0, 0, 0);" aria-label="Negro"></button>
+      <button class="color-btn" data-color="blanco" style="background-color: rgb(255, 255, 255); border: 1px solid #000000;"></button>
+      <button class="color-btn" data-color="natural" style="background-color: rgb(255, 254, 222); border: 1px solid #000000;"></button>
+      </div>
+    </a>
+
+    <a href="chombas/chombafeel.html" class="categoria doble-img">
+      <div class="imagen-contenedor">
+        <img src="img/Chomba Feel Blanco ADELANTE.jpg" class="img-frente" alt="Chomba Feel">
+        <img src="img/Chomba Feel Blanco ATRAS.jpg" class="img-atras" alt="Chomba Feel">
+      </div>
+      <h2>Chomba Feel</h2>
       <div class="centrar-colores">
       <button class="color-btn" data-color="negro" style="background-color: rgb(0, 0, 0);" aria-label="Negro"></button>
       <button class="color-btn" data-color="blanco" style="background-color: rgb(255, 255, 255); border: 1px solid #000000;"></button>

@@ -8,28 +8,47 @@
   <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+  
+  
   <nav class="navbar">
-  <div class="menu-toggle" id="menu-toggle">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-  </div>
-  <ul class="nav-list" id="nav-list">
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="remeras.html">Remeras</a></li>
-    <li><a href="chombas.html">Chombas</a></li>
-    <li><a href="buzos.html">Buzos</a></li>
-    <li><a href="jeans.html">Jeans</a></li>
-    <li><a href="pantalones.html">Pantalones</a></li>
-    <li><a href="importadas.html">Importadas</a></li>
-    <li><a href="contacto.html">Contacto</a></li>
-  </ul>
-</nav>
+    <div id="menu-container"></div>
+    <script>
+      fetch("/menu.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("menu-container").innerHTML = data;
+        });
+    </script>
+  </nav>
+
+
 
   <header class="header">
     <h1>REMERAS</h1>
   </header>
   <main class="grid-container">
+    <a href="importadas/remerachicago.html" class="categoria doble-img">
+      <div class="imagen-contenedor">
+        <img src="img/Remera Chicago.jpg" class="img-frente" alt="Remera Chicago">
+        <img src="img/Remera Chicago.jpg" class="img-atras" alt="Remera Chicago">
+      </div>
+      <div class="centrar-colores">
+      <h2>Camiseta Chicago</h2>
+      <p class="etiqueta-descuento">35% OFF</p>
+    </div>
+    </a>
+
+    <a href="importadas/camisetaking.html" class="categoria doble-img">
+      <div class="imagen-contenedor">
+        <img src="img/Camiseta King.jpg" class="img-frente" alt="Camiseta King">
+        <img src="img/Camiseta King.jpg" class="img-atras" alt="Camiseta King">
+      </div>
+      <div class="centrar-colores">
+      <h2>Camiseta King</h2>
+      <p class="etiqueta-descuento">30% OFF</p>
+    </div>
+    </a>
+
     <a href="remeras/remerakeepgoing.html" class="categoria doble-img">
       <div class="imagen-contenedor">
         <img src="img/Remera Keep Going Blanco ADELANTE.jpg" class="img-frente" alt="Remera Keep Going">

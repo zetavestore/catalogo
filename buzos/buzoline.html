@@ -8,58 +8,42 @@
   <link rel="stylesheet" href="../estilos.css" />
 </head>
 <body>
+  
+  
   <nav class="navbar">
-  <div class="menu-toggle" id="menu-toggle">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-  </div>
-  <ul class="nav-list" id="nav-list">
-    <li><a href="../index.html">Inicio</a></li>
-    <li><a href="../remeras.html">Remeras</a></li>
-    <li><a href="../chombas.html">Chombas</a></li>
-    <li><a href="../buzos.html">Buzos</a></li>
-    <li><a href="../jeans.html">Jeans</a></li>
-    <li><a href="../importadas.html">Importadas</a></li>
-    <li><a href="../pantalones.html">Pantalones</a></li>
-    <li><a href="../contacto.html">Contacto</a></li>
-  </ul>
-</nav>
+    <div id="menu-container"></div>
+    <script>
+      fetch("/menu.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("menu-container").innerHTML = data;
+        });
+    </script>
+  </nav>
+
+
 
   <main class="producto-container">
     <section class="imagenes-producto galeria-producto">
   <input type="radio" name="galeria" id="img-1" checked>
-  <input type="radio" name="galeria" id="img-2">
-  <input type="radio" name="galeria" id="img-3">
 
   <div class="imagen" id="slide-1">
-    <label for="img-2" class="nav nav-next">›</label>
-    <label for="img-3" class="nav nav-prev">‹</label>
-    <img src="../img/Buzo Line Verde ADELANTE.jpg" alt="Buzo Line Verde">
-</div>
-
-  <div class="imagen" id="slide-2">
     <label for="img-3" class="nav nav-next">›</label>
     <label for="img-1" class="nav nav-prev">‹</label>
     <img src="../img/Buzo Line Bordo ADELANTE.jpg" alt="Buzo Line Bordo ADELANTE">
-</div>
-
-  <div class="imagen" id="slide-3">
-    <label for="img-1" class="nav nav-next">›</label>
-    <label for="img-2" class="nav nav-prev">‹</label>
-    <img src="../img/Buzo Line Natural ADELANTE.jpg" alt="Buzo Line Natural">
 </div>
 </section>
 
     <section class="descripcion-producto">
       <h1>Buzo Line</h1>
-      <p class="precio-producto">$40.000</p>
+      <p class="precio-producto">
+        <span class="precio-original">$40.000</span>
+        <span class="precio-descuento">$30.000</span>
+      </p>
       
 <p class="texto-colores-disponibles"><strong>Seleccione un color:</strong></p>
 <div class="color-selector">
-  <button class="color-btn" data-color="verde" style="background-color: rgb(0, 104, 43);" aria-label="Negro"></button>
   <button class="color-btn" data-color="bordo" style="background-color: rgb(88, 13, 25); border: 1px solid #000000;"></button>
-  <button class="color-btn" data-color="natural" style="background-color: rgb(255, 248, 240); border: 1px solid #000000;"></button>
 </div>
 
 <p class="talles-visuales-titulo"><strong>Talles disponibles:</strong></p>
@@ -114,9 +98,7 @@ menuToggle.addEventListener('click', () => {
 
 // CAMBIAR STOCK DISPONIBLE
 const tallesPorColor = {
-  verde: [],
   bordo: ['S','M','L'],
-  natural: []
 };
 
 document.querySelectorAll('.color-btn').forEach(btn => {
@@ -150,9 +132,7 @@ const nextBtn = document.getElementById('lightbox-next');
 const prevBtn = document.getElementById('lightbox-prev');
 
 const images = [
-  "../img/Buzo Line Verde ADELANTE.jpg",
   "../img/Buzo Line Bordo ADELANTE.jpg",
-  "../img/Buzo Line Natural ADELANTE.jpg"
 ];
 
 let currentImageIndex = 0;
@@ -188,9 +168,7 @@ document.addEventListener('keydown', (e) => {
 // Seleccionar color cambia imagen principal
 const colorButtons = document.querySelectorAll('.color-btn');
 const colorToImageId = {
-  verde: 'img-1',
-  bordo: 'img-2',
-  natural: 'img-3'
+  bordo: 'img-1',
 };
 
 colorButtons.forEach(button => {

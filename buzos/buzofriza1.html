@@ -3,28 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Buzo Moscow - Zetave</title>
+  <title>Buzo Chomba - Zetave</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../estilos.css" />
 </head>
 <body>
+  
+  
   <nav class="navbar">
-  <div class="menu-toggle" id="menu-toggle">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-  </div>
-  <ul class="nav-list" id="nav-list">
-    <li><a href="../index.html">Inicio</a></li>
-    <li><a href="../remeras.html">Remeras</a></li>
-    <li><a href="../chombas.html">Chombas</a></li>
-    <li><a href="../buzos.html">Buzos</a></li>
-    <li><a href="../jeans.html">Jeans</a></li>
-    <li><a href="../importadas.html">Importadas</a></li>
-    <li><a href="../pantalones.html">Pantalones</a></li>
-    <li><a href="../contacto.html">Contacto</a></li>
-  </ul>
-</nav>
+    <div id="menu-container"></div>
+    <script>
+      fetch("/menu.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("menu-container").innerHTML = data;
+        });
+    </script>
+  </nav>
+
+
 
   <main class="producto-container">
     <section class="imagenes-producto galeria-producto">
@@ -34,32 +31,32 @@
   <div class="imagen" id="slide-1">
     <label for="img-2" class="nav nav-next">›</label>
     <label for="img-2" class="nav nav-prev">‹</label>
-    <img src="../img/Buzo Moscow Negro ADELANTE.jpg" alt="Buzo Moscow Negro">
+    <img src="../img/Buzo Friza Negro ADELANTE.jpg" alt="Buzo Friza Negro">
 </div>
 
   <div class="imagen" id="slide-2">
     <label for="img-1" class="nav nav-next">›</label>
     <label for="img-1" class="nav nav-prev">‹</label>
-    <img src="../img/Buzo Moscow Negro ATRAS.jpg" alt="Buzo Moscow Negro">
-</div>
+    <img src="../img/Buzo Friza Marron ADELANTE.jpg" alt="Buzo Friza Marron">
 </div>
 </section>
 
     <section class="descripcion-producto">
-      <h1>Buzo Moscow</h1>
+      <h1>Buzo Friza</h1>
       <p class="precio-producto">$40.000</p>
       
 <p class="texto-colores-disponibles"><strong>Seleccione un color:</strong></p>
 <div class="color-selector">
   <button class="color-btn" data-color="negro" style="background-color: black;" aria-label="Negro"></button>
+  <button class="color-btn" data-color="marron" style="background-color: rgb(94, 72, 43); border: 1px solid #000000;"></button>
 </div>
 
 <p class="talles-visuales-titulo"><strong>Talles disponibles:</strong></p>
 <div class="talle-selector">
-  <span class="talle" data-talle="S">S</span>
   <span class="talle" data-talle="M">M</span>
   <span class="talle" data-talle="L">L</span>
   <span class="talle" data-talle="XL">XL</span>
+  <span class="talle" data-talle="XXL">XXL</span>
 </div>
 
 
@@ -73,10 +70,10 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td>S</td><td>63</td><td>58</td></tr>
-          <tr><td>M</td><td>64</td><td>60</td></tr>
-          <tr><td>L</td><td>68</td><td>62</td></tr>
-          <tr><td>XL</td><td>70</td><td>64</td></tr>
+          <tr><td>M</td><td>72</td><td>58</td></tr>
+          <tr><td>L</td><td>73</td><td>60</td></tr>
+          <tr><td>XL</td><td>75</td><td>62</td></tr>
+          <tr><td>XXL</td><td>78</td><td>65</td></tr>
         </tbody>
       </table>
 
@@ -106,7 +103,8 @@ menuToggle.addEventListener('click', () => {
 
 // CAMBIAR STOCK DISPONIBLE
 const tallesPorColor = {
-  negro: []
+  negro: [],
+  marron: []
 };
 
 document.querySelectorAll('.color-btn').forEach(btn => {
@@ -140,8 +138,8 @@ const nextBtn = document.getElementById('lightbox-next');
 const prevBtn = document.getElementById('lightbox-prev');
 
 const images = [
-  "../img/Buzo Moscow Negro ADELANTE.jpg",
-  "../img/Buzo Moscow Negro ATRAS.jpg"
+  "../img/Buzo Friza Negro ADELANTE.jpg",
+  "../img/Buzo Friza Marron ADELANTE.jpg"
 ];
 
 let currentImageIndex = 0;
@@ -177,7 +175,8 @@ document.addEventListener('keydown', (e) => {
 // Seleccionar color cambia imagen principal
 const colorButtons = document.querySelectorAll('.color-btn');
 const colorToImageId = {
-  negro: 'img-1'
+  negro: 'img-1',
+  marron: 'img-2'
 };
 
 colorButtons.forEach(button => {

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buzos - Zetave</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  
+  
+  <nav class="navbar">
+    <div id="menu-container"></div>
+    <script>
+      fetch("/menu.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("menu-container").innerHTML = data;
+        });
+    </script>
+  </nav>
+
+
+
+  <header class="header">
+    <h1>DESCUENTOS</h1>
+  </header>
+
+  <main class="grid-container">
+    <a href="pantalones/joggingbaggyline.html" class="categoria doble-img">
+      <div class="imagen-contenedor">
+        <img src="img/Jogging Baggy Line Marron ATRAS.jpg" class="img-frente" alt="Jogging Baggy Line">
+        <img src="img/Jogging Baggy Line Marron ADELANTE.jpg" class="img-atras" alt="Jogging Baggy Line">
+      </div>
+      <h2>Jogging Baggy Line</h2>
+      <div class="centrar-colores">
+      <p class="etiqueta-descuento">30% OFF</p>
+      <button class="colores" data-color="marron" style="background-color: #7e4e3b; border: 1px solid #000000;"></button>
+      </div>
+    </a>
+    <a href="buzos/buzoline.html" class="categoria doble-img">
+      <div class="imagen-contenedor">
+        <img src="img/Buzo Line Bordo ADELANTE.jpg" class="img-frente" alt="Buzo Line">
+        <img src="img/Buzo Line Bordo ADELANTE.jpg" class="img-atras" alt="Buzo Line">
+      </div>
+      <h2>Buzo Line</h2>
+      <div class="centrar-colores">
+      <p class="etiqueta-descuento">25% OFF</p>
+      <button class="colores" data-color="bordo" style="background-color: rgb(88, 13, 25); border: 1px solid #000000;"></button>
+      </div>
+    </a>
+
+    <a href="buzos/buzoplk.html" class="categoria doble-img">
+      <div class="imagen-contenedor">
+        <img src="img/Buzo PLK Gris ADELANTE.jpg" class="img-frente" alt="Buzo PLK">
+        <img src="img/Buzo PLK Gris ADELANTE.jpg" class="img-atras" alt="Buzo PLK">
+      </div>
+      <h2>Buzo PLK</h2>
+      <div class="centrar-colores">
+      <p class="etiqueta-descuento">25% OFF</p>
+      <button class="colores" data-color="gris" style="background-color: rgb(97, 82, 95); border: 1px solid #000000;"></button>
+      </div>
+    </a>
+
+    <a href="buzos/buzoplace.html" class="categoria doble-img">
+      <div class="imagen-contenedor">
+        <img src="img/Buzo Place Chocolate ADELANTE.jpg" class="img-frente" alt="Buzo Place">
+        <img src="img/Buzo Place Chocolate ATRAS.jpg" class="img-atras" alt="Buzo Place">
+      </div>
+      <h2>Buzo Place</h2>
+      <div class="centrar-colores">
+      <p class="etiqueta-descuento">25% OFF</p>
+      <button class="colores" data-color="chocolate" style="background-color: rgb(150, 120, 130); border: 1px solid #000000;"></button>
+      </div>
+    </a>
+    <a href="importadas/remerachicago.html" class="categoria doble-img">
+      <div class="imagen-contenedor">
+        <img src="img/Remera Chicago.jpg" class="img-frente" alt="Remera Chicago">
+        <img src="img/Remera Chicago.jpg" class="img-atras" alt="Remera Chicago">
+      </div>
+      <div class="centrar-colores">
+      <h2>Camiseta Chicago</h2>
+      <p class="etiqueta-descuento">35% OFF</p>
+    </div>
+    </a>
+
+    <a href="importadas/camisetaking.html" class="categoria doble-img">
+      <div class="imagen-contenedor">
+        <img src="img/Camiseta King.jpg" class="img-frente" alt="Camiseta King">
+        <img src="img/Camiseta King.jpg" class="img-atras" alt="Camiseta King">
+      </div>
+      <div class="centrar-colores">
+      <h2>Camiseta King</h2>
+      <p class="etiqueta-descuento">30% OFF</p>
+    </div>
+    </a>
+
+    <a href="pantalones/joggingbaggy.html" class="categoria doble-img">
+      <div class="imagen-contenedor">
+        <img src="img/Jogging Baggy Marron.jpg" class="img-frente" alt="Jogging Baggy">
+        <img src="img/Jogging Baggy Gris.jpg" class="img-atras" alt="Jogging Baggy">
+      </div>
+      <h2>Jogging Baggy</h2>
+      <div class="centrar-colores">
+      <p class="etiqueta-descuento">15% OFF</p>
+      <button class="colores" data-color="marron" style="background-color: #643f30; border: 1px solid #000000;"></button>
+      <button class="colores" data-color="gris" style="background-color: rgb(163, 163, 163); border: 1px solid #000000;"></button>
+      </div>
+    </a>
+
+    <a href="pantalones/pantaloncharged.html" class="categoria doble-img">
+      <div class="imagen-contenedor">
+        <img src="img/Pantalon Cargo Charged Negro.jpg" class="img-frente" alt="Pantalon Cargo Charged">
+        <img src="img/Pantalon Cargo Charged Verde.jpg" class="img-atras" alt="Pantalon Cargo Charged">
+      </div>
+      <h2>Pantalon Cargo Charged</h2>
+      <div class="centrar-colores">
+      <p class="etiqueta-descuento">15% OFF</p>
+      <button class="colores" data-color="negro" style="background-color: black;" aria-label="Negro"></button>
+      <button class="colores" data-color="verde" style="background-color: rgb(0, 104, 43); border: 1px solid #000000;"></button>
+      <button class="colores" data-color="caqui" style="background-color: rgb(177, 152, 112); border: 1px solid #000000;"></button>
+      </div>
+    </a>
+
+    <a href="pantalones/pantalondsr.html" class="categoria doble-img">
+      <div class="imagen-contenedor">
+        <img src="img/Pantalon Cargo DSR Crema.jpg" class="img-frente" alt="Pantalon Cargo DSR">
+        <img src="img/Pantalon Cargo DSR Crema.jpg" class="img-atras" alt="Pantalon Cargo DSR">
+      </div>
+      <h2>Pantalon Cargo DSR</h2>
+      <div class="centrar-colores">
+      <p class="etiqueta-descuento">15% OFF</p>
+      <button class="colores" data-color="crema" style="background-color: rgb(255, 254, 223); border: 1px solid #000000;"></button>
+      </div>
+    </a>
+
+    <a href="chombas/chombawashington.html" class="categoria doble-img">
+      <div class="imagen-contenedor">
+        <img src="img/Chomba Washington Chocolate ADELANTE.jpg" class="img-frente" alt="Chomba Washington">
+        <img src="img/Chomba Washington Chocolate ATRAS.jpg" class="img-atras" alt="Chomba Washington">
+      </div>
+      <h2>Chomba Washington</h2>
+      <div class="centrar-colores">
+      <p class="etiqueta-descuento">10% OFF</p>
+      <button class="color-btn" data-color="chocolate" style="background-color: rgb(158, 72, 38); border: 1px solid #000000;"></button>
+      </div>
+    </a>
+
+    <a href="chombas/chombahide.html" class="categoria doble-img">
+      <div class="imagen-contenedor">
+        <img src="img/Chomba Hide Negro ADELANTE.jpg" class="img-frente" alt="Chomba Hide">
+        <img src="img/Chomba Hide Negro ATRAS.jpg" class="img-atras" alt="Chomba Hide">
+      </div>
+      <h2>Chomba Hide</h2>
+      <div class="centrar-colores">
+      <p class="etiqueta-descuento">10% OFF</p>
+      <button class="color-btn" data-color="negro" style="background-color: rgb(0, 0, 0);" aria-label="Negro"></button>
+      <button class="color-btn" data-color="blanco" style="background-color: rgb(255, 255, 255); border: 1px solid #000000;"></button>
+      <button class="color-btn" data-color="natural" style="background-color: rgb(255, 254, 222); border: 1px solid #000000;"></button>
+      </div>
+    </a>
+  </main>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navList = document.getElementById('nav-list');
+    menuToggle.addEventListener('click', () => {
+      navList.classList.toggle('show');
+    });
+  </script>
+<footer class="footer">
+  <p>&copy; 2025 Zetave Store.</p>
+  <p>Instagram: @zetave.store | WhatsApp: 2804304421</p>
+</footer>
+</body>
+</html>

@@ -8,23 +8,20 @@
   <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+  
+  
   <nav class="navbar">
-  <div class="menu-toggle" id="menu-toggle">
-    <div class="bar"></div>
-    <div class="bar"></div>
-    <div class="bar"></div>
-  </div>
-  <ul class="nav-list" id="nav-list">
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="remeras.html">Remeras</a></li>
-    <li><a href="chombas.html">Chombas</a></li>
-    <li><a href="buzos.html">Buzos</a></li>
-    <li><a href="jeans.html">Jeans</a></li>
-    <li><a href="pantalones.html">Pantalones</a></li>
-    <li><a href="importadas.html">Importadas</a></li>
-    <li><a href="contacto.html">Contacto</a></li>
-  </ul>
-</nav>
+    <div id="menu-container"></div>
+    <script>
+      fetch("/menu.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("menu-container").innerHTML = data;
+        });
+    </script>
+  </nav>
+
+
 
   <header class="header">
     <h1>PANTALONES</h1>
@@ -53,12 +50,12 @@
 
     <a href="pantalones/joggingbaggy.html" class="categoria doble-img">
       <div class="imagen-contenedor">
-        <img src="img/Jogging Baggy Negro.jpg" class="img-frente" alt="Jogging Baggy">
-        <img src="img/Jogging Baggy Marron.jpg" class="img-atras" alt="Jogging Baggy">
+        <img src="img/Jogging Baggy Marron.jpg" class="img-frente" alt="Jogging Baggy">
+        <img src="img/Jogging Baggy Gris.jpg" class="img-atras" alt="Jogging Baggy">
       </div>
       <h2>Jogging Baggy</h2>
       <div class="centrar-colores">
-      <button class="colores" data-color="negro" style="background-color: black;" aria-label="Negro"></button>
+      <p class="etiqueta-descuento">15% OFF</p>
       <button class="colores" data-color="marron" style="background-color: #643f30; border: 1px solid #000000;"></button>
       <button class="colores" data-color="gris" style="background-color: rgb(163, 163, 163); border: 1px solid #000000;"></button>
       </div>
@@ -83,6 +80,7 @@
       </div>
       <h2>Pantalon Cargo Charged</h2>
       <div class="centrar-colores">
+      <p class="etiqueta-descuento">15% OFF</p>
       <button class="colores" data-color="negro" style="background-color: black;" aria-label="Negro"></button>
       <button class="colores" data-color="verde" style="background-color: rgb(0, 104, 43); border: 1px solid #000000;"></button>
       <button class="colores" data-color="caqui" style="background-color: rgb(177, 152, 112); border: 1px solid #000000;"></button>
