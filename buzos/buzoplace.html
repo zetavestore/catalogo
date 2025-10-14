@@ -18,7 +18,17 @@
         .then(response => response.text())
         .then(data => {
           document.getElementById("menu-container").innerHTML = data;
-        });
+
+    // JS del menú hamburguesa, ejecutado después de insertar el HTML
+    const menuToggle = document.getElementById("menu-toggle");
+    const navList = document.getElementById("nav-list");
+    if (menuToggle && navList) {
+      menuToggle.addEventListener("click", () => {
+        navList.classList.toggle("show");
+      });
+    }
+  })
+  .catch(err => console.error("Error cargando el menú:", err));
     </script>
   </nav>
 
@@ -99,16 +109,6 @@
   </div>
 </div>
 <script>
-  // Menú hamburguesa
-document.addEventListener("DOMContentLoaded", () => {
-  const menuToggle = document.getElementById("menu-toggle");
-  const navList = document.getElementById("nav-list");
-  if (menuToggle && navList) {
-    menuToggle.addEventListener("click", () => {
-      navList.classList.toggle("show");
-    });
-  }
-});
 // CAMBIAR STOCK DISPONIBLE
 const tallesPorColor = {
   chocolate: ['S']

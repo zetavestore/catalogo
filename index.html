@@ -18,7 +18,17 @@
         .then(response => response.text())
         .then(data => {
           document.getElementById("menu-container").innerHTML = data;
-        });
+
+    // JS del menú hamburguesa, ejecutado después de insertar el HTML
+    const menuToggle = document.getElementById("menu-toggle");
+    const navList = document.getElementById("nav-list");
+    if (menuToggle && navList) {
+      menuToggle.addEventListener("click", () => {
+        navList.classList.toggle("show");
+      });
+    }
+  })
+  .catch(err => console.error("Error cargando el menú:", err));
     </script>
   </nav>
 
@@ -40,10 +50,6 @@
       <img src="img/chombas.jpg" alt="Chombas">
       <h2>Chombas</h2>
     </a>
-    <a href="buzos.html" class="categoria">
-      <img src="img/buzos.jpg" alt="Buzos">
-      <h2>Buzos</h2>
-    </a>
     <a href="jeans.html" class="categoria">
       <img src="img/jeans.jpg" alt="Jeans">
       <h2>Jeans</h2>
@@ -52,22 +58,16 @@
       <img src="img/pantalones.jpg" alt="Pantalones">
       <h2>Pantalones</h2>
     </a>
-    <a href="importadas.html" class="categoria">
+    <a href="buzos.html" class="categoria">
+      <img src="img/buzos.jpg" alt="Buzos">
+      <h2>Buzos</h2>
+    </a>
+    <a href="descuentos.html" class="categoria">
       <img src="img/importadas.jpg" alt="Importadas">
-      <h2>Importadas</h2>
+      <h2>Descuentos</h2>
     </a>
   </main>
-  <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const menuToggle = document.getElementById("menu-toggle");
-  const navList = document.getElementById("nav-list");
-  if (menuToggle && navList) {
-    menuToggle.addEventListener("click", () => {
-      navList.classList.toggle("show");
-    });
-  }
-});
-</script>
+  
 
 </body>
 <footer class="footer">
