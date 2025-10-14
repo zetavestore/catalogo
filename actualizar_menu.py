@@ -8,7 +8,7 @@ nuevo_menu = '''
   <nav class="navbar">
     <div id="menu-container"></div>
     <script>
-      fetch("/menu.html")
+      fetch("/catalogo/menu.html")
         .then(response => response.text())
         .then(data => {
           document.getElementById("menu-container").innerHTML = data;
