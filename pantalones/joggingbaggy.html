@@ -49,7 +49,7 @@
   <div class="imagen" id="slide-2">
   <label for="img-1" class="nav nav-next">›</label>
   <label for="img-2" class="nav nav-prev">‹</label>
-  <img src="../img/Jogging Baggy Gris.jpg" alt="Jogging Baggy Gris">
+  <img src="../img/Jogging Baggy Marron.jpg.jpg" alt="Jogging Baggy Gris">
 </div>
 </section>
 
@@ -63,7 +63,6 @@
 <p class="texto-colores-disponibles"><strong>Seleccione un color:</strong></p>
 <div class="color-selector">
   <button class="color-btn" data-color="marron" style="background-color: #643f30; border: 1px solid #000000;"></button>
-  <button class="color-btn" data-color="gris" style="background-color: rgb(163, 163, 163); border: 1px solid #000000;"></button>
 </div>
 
 <p class="talles-visuales-titulo"><strong>Talles disponibles:</strong></p>
@@ -111,7 +110,6 @@
 <script>
 // CAMBIAR STOCK DISPONIBLE
 const tallesPorColor = {
-  gris: ['4'],
   marron: ['2','3']
 };
 
@@ -147,7 +145,7 @@ const prevBtn = document.getElementById('lightbox-prev');
 
 const images = [
   "../img/Jogging Baggy Marron.jpg",
-  "../img/Jogging Baggy Gris.jpg"
+  "../img/Jogging Baggy Marron.jpg"
 ];
 
 let currentImageIndex = 0;
@@ -184,7 +182,6 @@ document.addEventListener('keydown', (e) => {
 const colorButtons = document.querySelectorAll('.color-btn');
 const colorToImageId = {
   marron: 'img-1',
-  gris: 'img-2'
 };
 
 colorButtons.forEach(button => {
