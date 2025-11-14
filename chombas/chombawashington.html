@@ -131,7 +131,10 @@ document.querySelectorAll('.color-btn').forEach(btn => {
 });
 
 window.addEventListener('DOMContentLoaded', () => {
-  document.querySelector('.imagen[data-color="slide-1"]').click();
+  const primerColor = document.querySelector('.color-btn');
+  if (primerColor) {
+    primerColor.click();
+  }
 });
 
 // Lightbox

@@ -159,8 +159,18 @@ document.querySelectorAll('.color-btn').forEach(btn => {
   });
 });
 
+// al final de donde definiste los handlers
 window.addEventListener('DOMContentLoaded', () => {
-  document.querySelector('.imagen[data-color="slide-1"]').click();
+  // espera un tick para asegurarnos que todo el JS anterior corrió
+  setTimeout(() => {
+    const primerColor = document.querySelector('.color-btn');
+    if (primerColor) {
+      // disparar un click "real" que van a recibir los handlers
+      primerColor.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }));
+      // por si acaso, también dejamos la clase visual
+      primerColor.classList.add('selected');
+    }
+  }, 0);
 });
 
 // Lightbox
