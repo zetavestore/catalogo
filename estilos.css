@@ -231,13 +231,23 @@ p {
   font-size: 0.9rem;
   font-weight: bold;
   padding: 4px 8px;
-  border-radius: 6px;
   position: absolute;
   left: 0;
   margin-left: 25px;
-  margin-bottom: 0;
+  margin-bottom: 300px;
 }
 
+.sin-stock {
+  background-color: #000000;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 4px 8px;
+  position: absolute;
+  left: 0;
+  margin-left: 25px;
+  margin-bottom: 200px;
+}
 
 .grid-container h2 {
   margin-bottom: 5px;
