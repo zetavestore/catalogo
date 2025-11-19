@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Remera The Obey - Zetave</title>
+  <title>Remera Simv - Zetave</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../estilos.css" />
 </head>
@@ -39,57 +39,29 @@
     <section class="imagenes-producto galeria-producto">
   <input type="radio" name="galeria" id="img-1" checked>
   <input type="radio" name="galeria" id="img-2">
-  <input type="radio" name="galeria" id="img-3">
-  <input type="radio" name="galeria" id="img-4">
-  <input type="radio" name="galeria" id="img-5">
-  <input type="radio" name="galeria" id="img-6">
 
   <div class="imagen" id="slide-1">
     <label for="img-2" class="nav nav-next">›</label>
-    <label for="img-6" class="nav nav-prev">‹</label>
-    <img src="../img/Remera Tropics Marron ADELANTE.jpg" alt="Remera Tropics Marron">
+    <label for="img-4" class="nav nav-prev">‹</label>
+    <img src="../img/Remera Simv Crema ADELANTE.jpg" alt="Remera Simv Crema">
 </div>
 
   <div class="imagen" id="slide-2">
-    <label for="img-3" class="nav nav-next">›</label>
-    <label for="img-1" class="nav nav-prev">‹</label>
-    <img src="../img/Remera Tropics Marron ATRAS.jpg" alt="Remera Tropics Marron">
-</div>
-
-  <div class="imagen" id="slide-3">
   <label for="img-4" class="nav nav-next">›</label>
   <label for="img-2" class="nav nav-prev">‹</label>
-  <img src="../img/Remera Tropics Crema ADELANTE.jpg" alt="Remera Tropics Crema">
-</div>
-
-<div class="imagen" id="slide-4">
-  <label for="img-5" class="nav nav-next">›</label>
-  <label for="img-3" class="nav nav-prev">‹</label>
-  <img src="../img/Remera Tropics Crema ATRAS.jpg" alt="Remera Tropics Crema">
-</div>
-
-<div class="imagen" id="slide-5">
-  <label for="img-6" class="nav nav-next">›</label>
-  <label for="img-4" class="nav nav-prev">‹</label>
-  <img src="../img/Remera Tropics Negro ADELANTE.jpg" alt="Remera Tropics Negro">
-</div>
-
-<div class="imagen" id="slide-6">
-  <label for="img-1" class="nav nav-next">›</label>
-  <label for="img-5" class="nav nav-prev">‹</label>
-  <img src="../img/Remera Tropics Negro ATRAS.jpg" alt="Remera Tropics Negro">
+  <img src="../img/Remera Simv Negro ADELANTE.jpg" alt="Remera Simv Negro">
 </div>
 </section>
 
     <section class="descripcion-producto">
-      <h1>Remera Tropics</h1>
+      <h1>Remera Simv</h1>
       <p class="precio-producto">$15.000</p>
+      <p><strong>(Corte Boxy)</strong></p>
       
 <p class="texto-colores-disponibles"><strong>Seleccione un color:</strong></p>
 <div class="color-selector">
-  <button class="color-btn" data-color="marron" style="background-color: rgb(141, 122, 146); border: 1px solid #ccc;"></button>
-  <button class="color-btn" data-color="crema" style="background-color: rgb(252, 246, 223); border: 1px solid #ccc;"></button>
-  <button class="color-btn" data-color="negro" style="background-color: #000000;" aria-label="Negro"></button>
+  <button class="color-btn" data-color="crema" style="background-color: rgb(252, 246, 190); border: 1px solid #000000;"></button>
+  <button class="color-btn" data-color="negro" style="background-color: black;" aria-label="Negro"></button>
 </div>
 
 <p class="talles-visuales-titulo"><strong>Talles disponibles:</strong></p>
@@ -97,7 +69,6 @@
   <span class="talle" data-talle="S">S</span>
   <span class="talle" data-talle="M">M</span>
   <span class="talle" data-talle="L">L</span>
-  <span class="talle" data-talle="XL">XL</span>
 </div>
 
 
@@ -111,10 +82,9 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td>S</td><td>71</td><td>53</td></tr>
-          <tr><td>M</td><td>73</td><td>56</td></tr>
-          <tr><td>L</td><td>75</td><td>57</td></tr>
-          <tr><td>XL</td><td>78</td><td>61</td></tr>
+          <tr><td>S</td><td>69</td><td>59</td></tr>
+          <tr><td>M</td><td>72</td><td>62</td></tr>
+          <tr><td>L</td><td>74</td><td>64</td></tr>
         </tbody>
       </table>
 
@@ -137,9 +107,8 @@
 <script>
 // CAMBIAR STOCK DISPONIBLE
 const tallesPorColor = {
-  marron: [],
-  crema: [],
-  negro: []
+  crema: ['S'],
+  negro: ['M'],
 };
 
 document.querySelectorAll('.color-btn').forEach(btn => {
@@ -176,12 +145,8 @@ const nextBtn = document.getElementById('lightbox-next');
 const prevBtn = document.getElementById('lightbox-prev');
 
 const images = [
-  "../img/Remera Tropics Marron ADELANTE.jpg",
-  "../img/Remera Tropics Marron ATRAS.jpg",
-  "../img/Remera Tropics Crema ADELANTE.jpg",
-  "../img/Remera Tropics Crema ATRAS.jpg",
-  "../img/Remera Tropics Negro ADELANTE.jpg",
-  "../img/Remera Tropics Negro ATRAS.jpg",
+  "../img/Remera Simv Crema ADELANTE.jpg",
+  "../img/Remera Simv Negro ADELANTE.jpg"
 ];
 
 let currentImageIndex = 0;
@@ -217,9 +182,8 @@ document.addEventListener('keydown', (e) => {
 // Seleccionar color cambia imagen principal
 const colorButtons = document.querySelectorAll('.color-btn');
 const colorToImageId = {
-  marron: 'img-1',
-  crema: 'img-3',
-  negro: 'img-5'
+  crema: 'img-1',
+  negro: 'img-2',
 };
 
 colorButtons.forEach(button => {

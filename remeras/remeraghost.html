@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Remera Peso Project - Zetave</title>
+  <title>Remera Ghost - Zetave</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../estilos.css" />
 </head>
@@ -43,19 +43,20 @@
   <div class="imagen" id="slide-1">
     <label for="img-2" class="nav nav-next">›</label>
     <label for="img-2" class="nav nav-prev">‹</label>
-    <img src="../img/Remera Peso Project Negro ADELANTE.jpg" alt="Remera Peso Project">
+    <img src="../img/Remera Ghost Negro ADELANTE.jpg" alt="Remera Ghost">
 </div>
 
   <div class="imagen" id="slide-2">
     <label for="img-1" class="nav nav-next">›</label>
     <label for="img-1" class="nav nav-prev">‹</label>
-    <img src="../img/Remera Peso Project Negro ATRAS.jpg" alt="Remera Peso Project">
+    <img src="../img/Remera Ghost Negro ATRAS.jpg" alt="Remera Ghost">
 </div>
 </section>
 
     <section class="descripcion-producto">
-      <h1>Remera Peso Project</h1>
+      <h1>Remera Ghost</h1>
       <p class="precio-producto">$15.000</p>
+      <p><strong>(Corte Oversize)</strong></p>
       
 <p class="texto-colores-disponibles"><strong>Seleccione un color:</strong></p>
 <div class="color-selector">
@@ -105,7 +106,7 @@
 <script>
 // CAMBIAR STOCK DISPONIBLE
 const tallesPorColor = {
-  negro: [],
+  negro: ['M','L'],
 };
 
 document.querySelectorAll('.color-btn').forEach(btn => {
@@ -142,8 +143,8 @@ const nextBtn = document.getElementById('lightbox-next');
 const prevBtn = document.getElementById('lightbox-prev');
 
 const images = [
-  "../img/Remera Peso Project Negro ADELANTE.jpg",
-  "../img/Remera Peso Project Negro ATRAS.jpg",
+  "../img/Remera Ghost Negro ADELANTE.jpg",
+  "../img/Remera Ghost Negro ATRAS.jpg",
 ];
 
 let currentImageIndex = 0;

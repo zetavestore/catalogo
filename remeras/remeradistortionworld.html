@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Remera The Obey - Zetave</title>
+  <title>Remera Distortion World - Zetave</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../estilos.css" />
 </head>
@@ -41,56 +41,41 @@
   <input type="radio" name="galeria" id="img-2">
   <input type="radio" name="galeria" id="img-3">
   <input type="radio" name="galeria" id="img-4">
-  <input type="radio" name="galeria" id="img-5">
-  <input type="radio" name="galeria" id="img-6">
 
   <div class="imagen" id="slide-1">
     <label for="img-2" class="nav nav-next">›</label>
-    <label for="img-6" class="nav nav-prev">‹</label>
-    <img src="../img/Remera The Obey Negro ADELANTE.jpg" alt="Remera The Obey Negro">
+    <label for="img-4" class="nav nav-prev">‹</label>
+    <img src="../img/Remera Distortion World Celeste ADELANTE.jpg" alt="Remera Distortion World Celeste">
 </div>
 
   <div class="imagen" id="slide-2">
     <label for="img-3" class="nav nav-next">›</label>
     <label for="img-1" class="nav nav-prev">‹</label>
-    <img src="../img/Remera The Obey Negro ATRAS.jpg" alt="Remera The Obey Negro">
+    <img src="../img/Remera Distortion World Celeste ATRAS.jpg" alt="Remera Distortion World Celeste">
 </div>
 
   <div class="imagen" id="slide-3">
   <label for="img-4" class="nav nav-next">›</label>
   <label for="img-2" class="nav nav-prev">‹</label>
-  <img src="../img/Remera The Obey Blanco ADELANTE.jpg" alt="Remera The Obey Blanco">
+  <img src="../img/Remera Distortion World Negro ADELANTE.jpg" alt="Remera Distortion World Negro">
 </div>
 
 <div class="imagen" id="slide-4">
-  <label for="img-5" class="nav nav-next">›</label>
-  <label for="img-3" class="nav nav-prev">‹</label>
-  <img src="../img/Remera The Obey Blanco ATRAS.jpg" alt="Remera The Obey Blanco">
-</div>
-
-<div class="imagen" id="slide-5">
-  <label for="img-6" class="nav nav-next">›</label>
-  <label for="img-4" class="nav nav-prev">‹</label>
-  <img src="../img/Remera The Obey Azul ADELANTE.jpg" alt="Remera The Obey Azul">
-</div>
-
-<div class="imagen" id="slide-6">
   <label for="img-1" class="nav nav-next">›</label>
-  <label for="img-5" class="nav nav-prev">‹</label>
-  <img src="../img/Remera The Obey Azul ATRAS.jpg" alt="Remera The Obey Azul">
+  <label for="img-3" class="nav nav-prev">‹</label>
+  <img src="../img/Remera Distortion World Negro ATRAS.jpg" alt="Remera Distortion World Negro">
 </div>
 </section>
 
     <section class="descripcion-producto">
-      <h1>Remera The Obey</h1>
+      <h1>Remera Distortion World</h1>
       <p class="precio-producto">$15.000</p>
       <p><strong>(Corte Oversize)</strong></p>
       
 <p class="texto-colores-disponibles"><strong>Seleccione un color:</strong></p>
 <div class="color-selector">
+  <button class="color-btn" data-color="celeste" style="background-color: rgb(0, 167, 218); border: 1px solid #000000;"></button>
   <button class="color-btn" data-color="negro" style="background-color: black;" aria-label="Negro"></button>
-  <button class="color-btn" data-color="blanco" style="background-color: white; border: 1px solid #ccc;"></button>
-  <button class="color-btn" data-color="azul" style="background-color: #1e5999;"></button>
 </div>
 
 <p class="talles-visuales-titulo"><strong>Talles disponibles:</strong></p>
@@ -136,9 +121,8 @@
 <script>
 // CAMBIAR STOCK DISPONIBLE
 const tallesPorColor = {
-  negro: [],
-  blanco: ['M'],
-  azul: []
+  celeste: ['S','M'],
+  negro: ['L'],
 };
 
 document.querySelectorAll('.color-btn').forEach(btn => {
@@ -175,12 +159,10 @@ const nextBtn = document.getElementById('lightbox-next');
 const prevBtn = document.getElementById('lightbox-prev');
 
 const images = [
-  "../img/Remera The Obey Negro ADELANTE.jpg",
-  "../img/Remera The Obey Negro ATRAS.jpg",
-  "../img/Remera The Obey Blanco ADELANTE.jpg",
-  "../img/Remera The Obey Blanco ATRAS.jpg",
-  "../img/Remera The Obey Azul ADELANTE.jpg",
-  "../img/Remera The Obey Azul ATRAS.jpg"
+  "../img/Remera Distortion World Celeste ADELANTE.jpg",
+  "../img/Remera Distortion World Celeste ATRAS.jpg",
+  "../img/Remera Distortion World Negro ADELANTE.jpg",
+  "../img/Remera Distortion World Negro ATRAS.jpg",
 ];
 
 let currentImageIndex = 0;
@@ -216,9 +198,8 @@ document.addEventListener('keydown', (e) => {
 // Seleccionar color cambia imagen principal
 const colorButtons = document.querySelectorAll('.color-btn');
 const colorToImageId = {
-  negro: 'img-1',
-  blanco: 'img-3',
-  azul: 'img-5'
+  celeste: 'img-1',
+  negro: 'img-3',
 };
 
 colorButtons.forEach(button => {

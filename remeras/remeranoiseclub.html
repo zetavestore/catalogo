@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Remera Mosaic - Zetave</title>
+  <title>Remera Noise Club - Zetave</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../estilos.css" />
 </head>
@@ -43,31 +43,31 @@
   <div class="imagen" id="slide-1">
     <label for="img-2" class="nav nav-next">›</label>
     <label for="img-2" class="nav nav-prev">‹</label>
-    <img src="../img/Remera Mosaic ADELANTE.jpg" alt="Remera Mosaic">
+    <img src="../img/Remera Noise Club Negro ADELANTE.jpg" alt="Remera Noise Club">
 </div>
 
   <div class="imagen" id="slide-2">
     <label for="img-1" class="nav nav-next">›</label>
     <label for="img-1" class="nav nav-prev">‹</label>
-    <img src="../img/Remera Mosaic ATRAS.jpg" alt="Remera Mosaic">
+    <img src="../img/Remera Noise Club Negro ATRAS.jpg" alt="Remera Noise Club">
 </div>
 </section>
 
     <section class="descripcion-producto">
-      <h1>Remera Mosaic</h1>
+      <h1>Remera Noise Club</h1>
       <p class="precio-producto">$15.000</p>
+      <p><strong>(Corte Oversize)</strong></p>
       
 <p class="texto-colores-disponibles"><strong>Seleccione un color:</strong></p>
 <div class="color-selector">
-  <button class="color-btn" data-color="chocolate" style="background-color: rgb(112, 41, 36); border: 1px solid #000000;"></button>
+  <button class="color-btn" data-color="negro" style="background-color: rgb(17, 17, 17);" aria-label="Negro"></button>
 </div>
 
 <p class="talles-visuales-titulo"><strong>Talles disponibles:</strong></p>
 <div class="talle-selector">
-  <span class="talle" data-talle="1">1</span>
-  <span class="talle" data-talle="2">2</span>
-  <span class="talle" data-talle="3">3</span>
-  <span class="talle" data-talle="4">4</span>
+  <span class="talle" data-talle="S">S</span>
+  <span class="talle" data-talle="M">M</span>
+  <span class="talle" data-talle="L">L</span>
 </div>
 
 
@@ -81,10 +81,9 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td>1</td><td>76</td><td>58</td></tr>
-          <tr><td>2</td><td>77</td><td>59</td></tr>
-          <tr><td>3</td><td>78</td><td>60</td></tr>
-          <tr><td>4</td><td>79</td><td>61</td></tr>
+          <tr><td>S</td><td>80</td><td>56</td></tr>
+          <tr><td>M</td><td>81</td><td>59</td></tr>
+          <tr><td>L</td><td>83</td><td>63</td></tr>
         </tbody>
       </table>
 
@@ -107,7 +106,7 @@
 <script>
 // CAMBIAR STOCK DISPONIBLE
 const tallesPorColor = {
-  chocolate: []
+  negro: ['S'],
 };
 
 document.querySelectorAll('.color-btn').forEach(btn => {
@@ -144,8 +143,8 @@ const nextBtn = document.getElementById('lightbox-next');
 const prevBtn = document.getElementById('lightbox-prev');
 
 const images = [
-  "../img/Remera Mosaic ADELANTE.jpg",
-  "../img/Remera Mosaic ATRAS.jpg",
+  "../img/Remera Noise Club Negro ADELANTE.jpg",
+  "../img/Remera Noise Club Negro ATRAS.jpg",
 ];
 
 let currentImageIndex = 0;
@@ -181,7 +180,7 @@ document.addEventListener('keydown', (e) => {
 // Seleccionar color cambia imagen principal
 const colorButtons = document.querySelectorAll('.color-btn');
 const colorToImageId = {
-  chocolate: 'img-1',
+  negro: 'img-1',
 };
 
 colorButtons.forEach(button => {
