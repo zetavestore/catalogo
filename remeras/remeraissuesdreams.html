@@ -47,25 +47,25 @@
   <div class="imagen" id="slide-1">
     <label for="img-2" class="nav nav-next">›</label>
     <label for="img-6" class="nav nav-prev">‹</label>
-    <img src="../img/Remera Issues Dreams Negro ADELANTE.jpg" alt="Remera Issues Dreams Negro">
+    <img src="../img/Remera Issues Dreams Crema ADELANTE.jpg" alt="Remera Issues Dreams Crema">
 </div>
 
   <div class="imagen" id="slide-2">
     <label for="img-3" class="nav nav-next">›</label>
     <label for="img-1" class="nav nav-prev">‹</label>
-    <img src="../img/Remera Issues Dreams Negro ATRAS.jpg" alt="Remera Issues Dreams Negro">
+    <img src="../img/Remera Issues Dreams Crema ATRAS.jpg" alt="Remera Issues Dreams Crema">
 </div>
 
   <div class="imagen" id="slide-3">
   <label for="img-4" class="nav nav-next">›</label>
   <label for="img-2" class="nav nav-prev">‹</label>
-  <img src="../img/Remera Issues Dreams Crema ADELANTE.jpg" alt="Remera Issues Dreams Crema">
+  <img src="../img/Remera Issues Dreams Negro ADELANTE.jpg" alt="Remera Issues Dreams Negro">
 </div>
 
 <div class="imagen" id="slide-4">
   <label for="img-5" class="nav nav-next">›</label>
   <label for="img-3" class="nav nav-prev">‹</label>
-  <img src="../img/Remera Issues Dreams Crema ATRAS.jpg" alt="Remera Issues Dreams Crema">
+  <img src="../img/Remera Issues Dreams Negro ATRAS.jpg" alt="Remera Issues Dreams Negro">
 </div>
 
 <div class="imagen" id="slide-5">
@@ -88,8 +88,8 @@
       
 <p class="texto-colores-disponibles"><strong>Seleccione un color:</strong></p>
 <div class="color-selector">
-  <button class="color-btn" data-color="negro" style="background-color: black;" aria-label="Negro"></button>
   <button class="color-btn" data-color="crema" style="background-color: rgb(253, 240, 233); border: 1px solid #ccc;"></button>
+  <button class="color-btn" data-color="negro" style="background-color: black;" aria-label="Negro"></button>
   <button class="color-btn" data-color="verde" style="background-color: #6ea06e;"></button>
 </div>
 
@@ -136,8 +136,8 @@
 <script>
 // CAMBIAR STOCK DISPONIBLE
 const tallesPorColor = {
-  negro: [],
   crema: ['L'],
+  negro: [],
   verde: []
 };
 
@@ -175,10 +175,10 @@ const nextBtn = document.getElementById('lightbox-next');
 const prevBtn = document.getElementById('lightbox-prev');
 
 const images = [
-  "../img/Remera Issues Dreams Negro ADELANTE.jpg",
-  "../img/Remera Issues Dreams Negro ATRAS.jpg",
   "../img/Remera Issues Dreams Crema ADELANTE.jpg",
   "../img/Remera Issues Dreams Crema ATRAS.jpg",
+  "../img/Remera Issues Dreams Negro ADELANTE.jpg",
+  "../img/Remera Issues Dreams Negro ATRAS.jpg",
   "../img/Remera Issues Dreams Verde ADELANTE.jpg",
   "../img/Remera Issues Dreams Verde ATRAS.jpg"
 ];
@@ -216,8 +216,8 @@ document.addEventListener('keydown', (e) => {
 // Seleccionar color cambia imagen principal
 const colorButtons = document.querySelectorAll('.color-btn');
 const colorToImageId = {
-  negro: 'img-1',
-  crema: 'img-3',
+  crema: 'img-1',
+  negro: 'img-3',
   verde: 'img-5'
 };
 
