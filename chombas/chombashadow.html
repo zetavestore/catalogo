@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Remera Simv - Zetave</title>
+  <title>Chomba Shadow - Zetave</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../estilos.css" />
 </head>
@@ -43,33 +43,32 @@
 
   <div class="imagen" id="slide-1">
     <label for="img-2" class="nav nav-next">›</label>
-    <label for="img-4" class="nav nav-prev">‹</label>
-    <img src="../img/Remera Simv Negro ADELANTE.jpg" alt="Remera Simv Negro">
+    <label for="img-3" class="nav nav-prev">‹</label>
+    <img src="../img/Chomba Shadow Negro ADELANTE.jpg" alt="Remera Archive Momentum">
 </div>
 
   <div class="imagen" id="slide-2">
-  <label for="img-4" class="nav nav-next">›</label>
-  <label for="img-2" class="nav nav-prev">‹</label>
-  <img src="../img/Remera Simv Crema ADELANTE.jpg" alt="Remera Simv Crema">
+    <label for="img-3" class="nav nav-next">›</label>
+    <label for="img-1" class="nav nav-prev">‹</label>
+    <img src="../img/Chomba Shadow Blanco ADELANTE.jpg" alt="Remera Archive Momentum">
 </div>
 
   <div class="imagen" id="slide-3">
-  <label for="img-4" class="nav nav-next">›</label>
-  <label for="img-2" class="nav nav-prev">‹</label>
-  <img src="../img/Remera Simv Marron ADELANTE.jpg" alt="Remera Simv Marron">
+    <label for="img-1" class="nav nav-next">›</label>
+    <label for="img-2" class="nav nav-prev">‹</label>
+    <img src="../img/Chomba Shadow Natural ADELANTE.jpg" alt="Remera Archive Momentum">
 </div>
 </section>
 
     <section class="descripcion-producto">
-      <h1>Remera Simv</h1>
-      <p class="precio-producto">$18.000</p>
-      <p><strong>(Corte Boxy)</strong></p>
+      <h1>Chomba Shadow</h1>
+      <p class="precio-producto">$30.000</p>
       
 <p class="texto-colores-disponibles"><strong>Seleccione un color:</strong></p>
 <div class="color-selector">
-  <button class="color-btn" data-color="negro" style="background-color: black;" aria-label="Negro"></button>
-  <button class="color-btn" data-color="crema" style="background-color: rgb(252, 246, 190); border: 1px solid #000000;"></button>
-  <button class="color-btn" data-color="marron" style="background-color: rgb(105, 89, 54); border: 1px solid #000000;"></button>
+  <button class="color-btn" data-color="negro" style="background-color: rgb(17, 17, 17);" aria-label="Negro"></button>
+  <button class="color-btn" data-color="blanco" style="background-color: rgb(255, 255, 255); border: 1px solid #000000;"></button>
+  <button class="color-btn" data-color="natural" style="background-color: rgb(250, 238, 215); border: 1px solid #000000;"></button>
 </div>
 
 <p class="talles-visuales-titulo"><strong>Talles disponibles:</strong></p>
@@ -77,6 +76,7 @@
   <span class="talle" data-talle="S">S</span>
   <span class="talle" data-talle="M">M</span>
   <span class="talle" data-talle="L">L</span>
+  <span class="talle" data-talle="XL">XL</span>
 </div>
 
 
@@ -90,9 +90,10 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td>S</td><td>69</td><td>59</td></tr>
-          <tr><td>M</td><td>72</td><td>62</td></tr>
-          <tr><td>L</td><td>74</td><td>64</td></tr>
+          <tr><td>S</td><td>77</td><td>61</td></tr>
+          <tr><td>M</td><td>79</td><td>63</td></tr>
+          <tr><td>L</td><td>81</td><td>65</td></tr>
+          <tr><td>XL</td><td>83</td><td>67</td></tr>
         </tbody>
       </table>
 
@@ -115,9 +116,9 @@
 <script>
 // CAMBIAR STOCK DISPONIBLE
 const tallesPorColor = {
-  negro: ['S','L'],
-  crema: [],
-  marron: ['M'],
+  negro: ['S','M','L'],
+  blanco: ['M','L'],
+  natural: ['S','M']
 };
 
 document.querySelectorAll('.color-btn').forEach(btn => {
@@ -154,9 +155,9 @@ const nextBtn = document.getElementById('lightbox-next');
 const prevBtn = document.getElementById('lightbox-prev');
 
 const images = [
-  "../img/Remera Simv Negro ADELANTE.jpg",
-  "../img/Remera Simv Crema ADELANTE.jpg",
-  "../img/Remera Simv Marron ADELANTE.jpg"
+  "../img/Chomba Shadow Negro ADELANTE.jpg",
+  "../img/Chomba Shadow Blanco ADELANTE.jpg",
+  "../img/Chomba Shadow Natural ADELANTE.jpg"
 ];
 
 let currentImageIndex = 0;
@@ -193,8 +194,8 @@ document.addEventListener('keydown', (e) => {
 const colorButtons = document.querySelectorAll('.color-btn');
 const colorToImageId = {
   negro: 'img-1',
-  crema: 'img-2',
-  marron: 'img-3',
+  blanco: 'img-2',
+  natural: 'img-3'
 };
 
 colorButtons.forEach(button => {

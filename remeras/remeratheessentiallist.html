@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Remera Simv - Zetave</title>
+  <title>Remera The Essential List - Zetave</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../estilos.css" />
 </head>
@@ -39,37 +39,29 @@
     <section class="imagenes-producto galeria-producto">
   <input type="radio" name="galeria" id="img-1" checked>
   <input type="radio" name="galeria" id="img-2">
-  <input type="radio" name="galeria" id="img-3">
 
   <div class="imagen" id="slide-1">
     <label for="img-2" class="nav nav-next">›</label>
     <label for="img-4" class="nav nav-prev">‹</label>
-    <img src="../img/Remera Simv Negro ADELANTE.jpg" alt="Remera Simv Negro">
+    <img src="../img/Remera The Essential List Rosa ADELANTE.jpg" alt="Remera The Essential List Rosa ADELANTE">
 </div>
 
   <div class="imagen" id="slide-2">
   <label for="img-4" class="nav nav-next">›</label>
   <label for="img-2" class="nav nav-prev">‹</label>
-  <img src="../img/Remera Simv Crema ADELANTE.jpg" alt="Remera Simv Crema">
-</div>
-
-  <div class="imagen" id="slide-3">
-  <label for="img-4" class="nav nav-next">›</label>
-  <label for="img-2" class="nav nav-prev">‹</label>
-  <img src="../img/Remera Simv Marron ADELANTE.jpg" alt="Remera Simv Marron">
+  <img src="../img/Remera The Essential List Negro ADELANTE.jpg" alt="Remera The Essential List Negro ADELANTE">
 </div>
 </section>
 
     <section class="descripcion-producto">
-      <h1>Remera Simv</h1>
+      <h1>Remera The Essential List</h1>
       <p class="precio-producto">$18.000</p>
       <p><strong>(Corte Boxy)</strong></p>
       
 <p class="texto-colores-disponibles"><strong>Seleccione un color:</strong></p>
 <div class="color-selector">
+  <button class="color-btn" data-color="rosa" style="background-color: rgb(255, 117, 202); border: 1px solid #000000;"></button>
   <button class="color-btn" data-color="negro" style="background-color: black;" aria-label="Negro"></button>
-  <button class="color-btn" data-color="crema" style="background-color: rgb(252, 246, 190); border: 1px solid #000000;"></button>
-  <button class="color-btn" data-color="marron" style="background-color: rgb(105, 89, 54); border: 1px solid #000000;"></button>
 </div>
 
 <p class="talles-visuales-titulo"><strong>Talles disponibles:</strong></p>
@@ -115,9 +107,8 @@
 <script>
 // CAMBIAR STOCK DISPONIBLE
 const tallesPorColor = {
+  rosa: ['S'],
   negro: ['S','L'],
-  crema: [],
-  marron: ['M'],
 };
 
 document.querySelectorAll('.color-btn').forEach(btn => {
@@ -154,9 +145,8 @@ const nextBtn = document.getElementById('lightbox-next');
 const prevBtn = document.getElementById('lightbox-prev');
 
 const images = [
-  "../img/Remera Simv Negro ADELANTE.jpg",
-  "../img/Remera Simv Crema ADELANTE.jpg",
-  "../img/Remera Simv Marron ADELANTE.jpg"
+  "../img/Remera The Essential List Rosa ADELANTE.jpg",
+  "../img/Remera The Essential List Negro ADELANTE.jpg"
 ];
 
 let currentImageIndex = 0;
@@ -192,9 +182,8 @@ document.addEventListener('keydown', (e) => {
 // Seleccionar color cambia imagen principal
 const colorButtons = document.querySelectorAll('.color-btn');
 const colorToImageId = {
-  negro: 'img-1',
-  crema: 'img-2',
-  marron: 'img-3',
+  rosa: 'img-1',
+  negro: 'img-2',
 };
 
 colorButtons.forEach(button => {

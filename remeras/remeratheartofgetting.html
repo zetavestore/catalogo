@@ -43,24 +43,24 @@
   <div class="imagen" id="slide-1">
     <label for="img-2" class="nav nav-next">›</label>
     <label for="img-2" class="nav nav-prev">‹</label>
-    <img src="../img/Remera The Art Of Getting Negro ADELANTE.jpg" alt="Remera The Art Of Getting">
+    <img src="../img/Remera The Art Of Getting Blanco ADELANTE.jpg" alt="Remera The Art Of Getting">
 </div>
 
   <div class="imagen" id="slide-2">
     <label for="img-1" class="nav nav-next">›</label>
     <label for="img-1" class="nav nav-prev">‹</label>
-    <img src="../img/Remera The Art Of Getting Negro ATRAS.jpg" alt="Remera The Art Of Getting">
+    <img src="../img/Remera The Art Of Getting Blanco ATRAS.jpg" alt="Remera The Art Of Getting">
 </div>
 </section>
 
     <section class="descripcion-producto">
       <h1>Remera The Art Of Getting</h1>
-      <p class="precio-producto">$15.000</p>
+      <p class="precio-producto">$18.000</p>
       <p><strong>(Corte Boxy)</strong></p>
       
 <p class="texto-colores-disponibles"><strong>Seleccione un color:</strong></p>
 <div class="color-selector">
-  <button class="color-btn" data-color="negro" style="background-color: rgb(17, 17, 17);" aria-label="Negro"></button>
+  <button class="color-btn" data-color="blanco" style="background-color: rgb(17, 17, 17);" aria-label="Negro"></button>
 </div>
 
 <p class="talles-visuales-titulo"><strong>Talles disponibles:</strong></p>
@@ -106,7 +106,7 @@
 <script>
 // CAMBIAR STOCK DISPONIBLE
 const tallesPorColor = {
-  negro: [],
+  blanco: ['S'],
 };
 
 document.querySelectorAll('.color-btn').forEach(btn => {
@@ -143,8 +143,8 @@ const nextBtn = document.getElementById('lightbox-next');
 const prevBtn = document.getElementById('lightbox-prev');
 
 const images = [
-  "../img/Remera The Art Of Getting Negro ADELANTE.jpg",
-  "../img/Remera The Art Of Getting Negro ATRAS.jpg",
+  "../img/Remera The Art Of Getting Blanco ADELANTE.jpg",
+  "../img/Remera The Art Of Getting Blanco ATRAS.jpg",
 ];
 
 let currentImageIndex = 0;
@@ -180,7 +180,7 @@ document.addEventListener('keydown', (e) => {
 // Seleccionar color cambia imagen principal
 const colorButtons = document.querySelectorAll('.color-btn');
 const colorToImageId = {
-  negro: 'img-1',
+  blanco: 'img-1',
 };
 
 colorButtons.forEach(button => {
