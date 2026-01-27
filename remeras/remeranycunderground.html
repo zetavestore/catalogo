@@ -43,13 +43,13 @@
   <div class="imagen" id="slide-1">
     <label for="img-2" class="nav nav-next">›</label>
     <label for="img-2" class="nav nav-prev">‹</label>
-    <img src="../img/Remera NYC Underground Azul ADELANTE.jpg" alt="Remera NYC Underground">
+    <img src="../img/Remera NYC Underground Blanco ADELANTE.jpg" alt="Remera NYC Underground">
 </div>
 
   <div class="imagen" id="slide-2">
     <label for="img-1" class="nav nav-next">›</label>
     <label for="img-1" class="nav nav-prev">‹</label>
-    <img src="../img/Remera NYC Underground Azul ADELANTE.jpg" alt="Remera NYC Underground">
+    <img src="../img/Remera NYC Underground Negro ADELANTE.jpg" alt="Remera NYC Underground">
 </div>
 </section>
 
@@ -60,7 +60,8 @@
       
 <p class="texto-colores-disponibles"><strong>Seleccione un color:</strong></p>
 <div class="color-selector">
-  <button class="color-btn" data-color="azul" style="background-color: rgb(16, 27, 133);" aria-label="Negro"></button>
+  <button class="color-btn" data-color="blanco" style="background-color: rgb(255, 255, 255); border: 1px solid #000000;"></button>
+  <button class="color-btn" data-color="negro" style="background-color: rgb(17, 17, 17);" aria-label="Negro"></button>
 </div>
 
 <p class="talles-visuales-titulo"><strong>Talles disponibles:</strong></p>
@@ -106,7 +107,8 @@
 <script>
 // CAMBIAR STOCK DISPONIBLE
 const tallesPorColor = {
-  azul: [],
+  blanco: ['M'],
+  negro: ['L'],
 };
 
 document.querySelectorAll('.color-btn').forEach(btn => {
@@ -143,8 +145,8 @@ const nextBtn = document.getElementById('lightbox-next');
 const prevBtn = document.getElementById('lightbox-prev');
 
 const images = [
-  "../img/Remera NYC Underground Azul ADELANTE.jpg",
-  "../img/Remera NYC Underground Azul ADELANTE.jpg",
+  "../img/Remera NYC Underground Blanco ADELANTE.jpg",
+  "../img/Remera NYC Underground Negro ADELANTE.jpg",
 ];
 
 let currentImageIndex = 0;
@@ -180,7 +182,8 @@ document.addEventListener('keydown', (e) => {
 // Seleccionar color cambia imagen principal
 const colorButtons = document.querySelectorAll('.color-btn');
 const colorToImageId = {
-  azul: 'img-1',
+  blanco: 'img-1',
+  negro: 'img-2',
 };
 
 colorButtons.forEach(button => {

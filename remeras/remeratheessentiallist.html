@@ -42,13 +42,13 @@
 
   <div class="imagen" id="slide-1">
     <label for="img-2" class="nav nav-next">›</label>
-    <label for="img-4" class="nav nav-prev">‹</label>
-    <img src="../img/Remera The Essential List Rosa ADELANTE.jpg" alt="Remera The Essential List Rosa ADELANTE">
+    <label for="img-2" class="nav nav-prev">‹</label>
+    <img src="../img/Remera The Essential List Blanco ADELANTE.jpg" alt="Remera The Essential List Blanco ADELANTE">
 </div>
 
   <div class="imagen" id="slide-2">
-  <label for="img-4" class="nav nav-next">›</label>
-  <label for="img-2" class="nav nav-prev">‹</label>
+  <label for="img-1" class="nav nav-next">›</label>
+  <label for="img-1" class="nav nav-prev">‹</label>
   <img src="../img/Remera The Essential List Negro ADELANTE.jpg" alt="Remera The Essential List Negro ADELANTE">
 </div>
 </section>
@@ -60,7 +60,7 @@
       
 <p class="texto-colores-disponibles"><strong>Seleccione un color:</strong></p>
 <div class="color-selector">
-  <button class="color-btn" data-color="rosa" style="background-color: rgb(255, 117, 202); border: 1px solid #000000;"></button>
+  <button class="color-btn" data-color="blanco" style="background-color: rgb(255, 255, 255); border: 1px solid #000000;"></button>
   <button class="color-btn" data-color="negro" style="background-color: black;" aria-label="Negro"></button>
 </div>
 
@@ -107,7 +107,7 @@
 <script>
 // CAMBIAR STOCK DISPONIBLE
 const tallesPorColor = {
-  rosa: [],
+  blanco: ['S','M','L'],
   negro: [],
 };
 
@@ -145,7 +145,7 @@ const nextBtn = document.getElementById('lightbox-next');
 const prevBtn = document.getElementById('lightbox-prev');
 
 const images = [
-  "../img/Remera The Essential List Rosa ADELANTE.jpg",
+  "../img/Remera The Essential List Blanco ADELANTE.jpg",
   "../img/Remera The Essential List Negro ADELANTE.jpg"
 ];
 
@@ -182,7 +182,7 @@ document.addEventListener('keydown', (e) => {
 // Seleccionar color cambia imagen principal
 const colorButtons = document.querySelectorAll('.color-btn');
 const colorToImageId = {
-  rosa: 'img-1',
+  blanco: 'img-1',
   negro: 'img-2',
 };
 

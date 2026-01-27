@@ -43,7 +43,7 @@
   <div class="imagen" id="slide-1">
     <label for="img-2" class="nav nav-next">›</label>
     <label for="img-2" class="nav nav-prev">‹</label>
-    <img src="../img/Remera Lost Management City Negro ADELANTE.jpg" alt="Remera Lost Management City">
+    <img src="../img/Remera Lost Management City Blanco ADELANTE.jpg" alt="Remera Lost Management City">
 </div>
 
   <div class="imagen" id="slide-2">
@@ -60,6 +60,7 @@
       
 <p class="texto-colores-disponibles"><strong>Seleccione un color:</strong></p>
 <div class="color-selector">
+  <button class="color-btn" data-color="blanco" style="background-color: rgb(255, 255, 255); border: 1px solid #000000;"></button>
   <button class="color-btn" data-color="negro" style="background-color: rgb(17, 17, 17);" aria-label="Negro"></button>
 </div>
 
@@ -106,6 +107,7 @@
 <script>
 // CAMBIAR STOCK DISPONIBLE
 const tallesPorColor = {
+  blanco: ['M','L'],
   negro: ['M'],
 };
 
@@ -143,7 +145,7 @@ const nextBtn = document.getElementById('lightbox-next');
 const prevBtn = document.getElementById('lightbox-prev');
 
 const images = [
-  "../img/Remera Lost Management City Negro ADELANTE.jpg",
+  "../img/Remera Lost Management City Blanco ADELANTE.jpg",
   "../img/Remera Lost Management City Negro ADELANTE.jpg",
 ];
 
@@ -180,7 +182,8 @@ document.addEventListener('keydown', (e) => {
 // Seleccionar color cambia imagen principal
 const colorButtons = document.querySelectorAll('.color-btn');
 const colorToImageId = {
-  negro: 'img-1',
+  blanco: 'img-1',
+  negro: 'img-2',
 };
 
 colorButtons.forEach(button => {
